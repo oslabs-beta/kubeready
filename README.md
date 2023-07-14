@@ -1,6 +1,10 @@
 # OSP1-41
-new text
 
-diane-branch text
+This is our README - Serena
+Noels adding stuff.
+
+Alana is here, hello!
+
+Alvin WIP
 
 These are diane's newest changes.
