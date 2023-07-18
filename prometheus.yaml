@@ -1,0 +1,6 @@
+global: 
+  # how often Prometheus will scrape the metrics
+  scrape_interval: 8s
+  # how often Prometheus will evaluate the rules
+  evaluation_interval: 8s
+  
