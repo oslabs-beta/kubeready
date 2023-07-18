@@ -3,9 +3,27 @@ const express = require('express');
 const path = require('path');
 const app = express();
 // require in routes
-const routes = require('../routes/routes');
+const routes = require('./routes/routes.js');
 // assign the PORT
 const PORT = 3000;
+
+// handle environment specific serving
+if (process.env.NODE_ENV === 'production') {
+  // // serve these files
+  // app.use(express.static('./build/bundle)'));
+
+  // statically serve everything in the build folder on the route '/build'
+
+  //CHANGED ROUTE FROM /BUILD TO '/' - WAS RENDERING REACT APP IF U DID LOCALHOST:3000/BUILD
+  app.use('/', express.static(path.join(__dirname, '../build/')));
+
+  // serve index.html on the route '/'
+  app.get('/', (req, res) => {
+    return res
+      .status(200)
+      .sendFile(path.join(__dirname, '../client/index.html'));
+  });
+}
 
 // Serve static files from the assets folder.
 app.use(express.static(path.resolve(__dirname, '../client/assets')));
