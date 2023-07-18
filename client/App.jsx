@@ -2,12 +2,7 @@ import React from 'react';
 
 // Init func app that returns our main containers
 const App = () => {
-  return (
-    <div className='testcss'>
-      Hello World
-      <h1>hi there</h1>
-    </div>
-  );
+  return <div className='testcss'>coming from app.jsx</div>;
 };
 
 export default App;
