@@ -1,13 +1,13 @@
 // require in all necessary packages
 const express = require('express');
-const path = require('path');
 const app = express();
+const path = require('path');
 // require in routes
 const routes = require('./routes/routes.js');
 // assign the PORT
 const PORT = 3000;
 
-// handle environment specific serving
+// handle environment-specific serving
 if (process.env.NODE_ENV === 'production') {
   // // serve these files
   // app.use(express.static('./build/bundle)'));
