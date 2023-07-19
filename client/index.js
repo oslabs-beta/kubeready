@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './app.jsx';
+import App from './App.jsx';
 import ReactDOM from 'react-dom/client';
 
 // render App from app.jsx file on the html element with id of app in the index.html page
