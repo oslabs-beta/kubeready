@@ -4,3 +4,8 @@ global:
   # how often Prometheus will evaluate the rules
   evaluation_interval: 8s
   
+
+
+# scrape configurations for metrics go here
+  # this is a list of configurations that define what and how to scrape metrics
+scrape_configs:
