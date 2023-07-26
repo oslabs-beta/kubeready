@@ -4,12 +4,12 @@ import React from 'react';
 import './styles/styles.scss';
 //import apps child
 // import ClusterContainer from './containers/ClusterContainer.jsx';
+import DashboardContainer from './containers/DashboardContainer.jsx';
 
 const App = () => {
   return (
     <div>
-      {/* invoke clustercontainer */}
-      {/* <ClusterContainer /> */}
+      <DashboardContainer/>
       <h1>coming from app.jsx</h1>
       hi frm app.jsx testing
     </div>
