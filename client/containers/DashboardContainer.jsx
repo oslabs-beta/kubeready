@@ -6,7 +6,7 @@ const DashboardContainer = () => {
     <div>
       <p>dashboard container</p>
       <iframe 
-        title='Wed, July 26, 11:15pm snapshot' 
+        title='' 
         src="" 
         height="700px" 
         width="700px"
