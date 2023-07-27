@@ -4,7 +4,7 @@ const app = express();
 const path = require('path');
 // require in routes
 const routes = require('./routes/routes.js');
-// assign the PORT
+// assign the PORT (3001)- TRYING OUT 8080
 const PORT = 3001;
 
 // handle environment-specific serving
@@ -13,10 +13,8 @@ if (process.env.NODE_ENV === 'production') {
   // app.use(express.static('./build/bundle)'));
 
   // statically serve everything in the build folder on the route '/build'
-
   //CHANGED ROUTE FROM /BUILD TO '/' - WAS RENDERING REACT APP IF U DID LOCALHOST:3000/BUILD
   app.use('/', express.static(path.join(__dirname, '../build/')));
-
   // serve index.html on the route '/'
   app.get('/', (req, res) => {
     return res
@@ -26,11 +24,18 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Serve static files from the assets folder.
-app.use(express.static(path.resolve(__dirname, '../client/assets')));
-
+//FOR FUTURE
+app.use(express.static(path.resolve(__dirname, '../client')));
+// client / login.html;
 // Route for serving index.html
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/index.html'));
+});
+
+//SERENA MAKING CHANGES BC MAKING A LOGIN PAGE
+//login route
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/login.html'));
 });
 
 // set content-type header based on file extension
