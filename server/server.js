@@ -4,8 +4,22 @@ const app = express();
 const path = require('path');
 // require in routes
 const routes = require('./routes/routes.js');
-// assign the PORT (3001)- TRYING OUT 8080
+// assign the PORT (3001)
 const PORT = 3001;
+
+const mongoose = require('mongoose');
+// ** testing to see if connections work first, then will need to refactor mongoDB connections into .env **
+const myURI =
+  'mongodb+srv://serenahromano2000:<E17s30FqKCRZoW5t>@cluster0.krvanjb.mongodb.net/';
+const URI = process.env.MONGO_URI || myURI;
+
+mongoose.connect(
+  'mongodb+srv://serenahromano2000:passwordforURI@cluster0.x9zlw6i.mongodb.net/',
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
+mongoose.connection.once('open', () => {
+  console.log('Connected to Database');
+});
 
 // handle environment-specific serving
 if (process.env.NODE_ENV === 'production') {
@@ -37,6 +51,10 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/login.html'));
 });
+
+//invoking routes middleware for any incoming HTTP requests
+// /api is path - telling it to look at router
+app.use('/api', router);
 
 // set content-type header based on file extension
 app.use((req, res, next) => {
