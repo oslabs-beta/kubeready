@@ -7,6 +7,7 @@ import './styles/styles.scss';
 import DashboardContainer from './containers/DashboardContainer.jsx';
 import LogoutContainer from './containers/LogoutContainer.jsx';
 import Login from './components/Login.jsx';
+import SignUp from './components/SignUp.jsx';
 //testing out react router here!!
 import { Route, Routes } from 'react-router-dom';
 
@@ -23,8 +24,8 @@ const App = () => {
       {/* <Routes>
         <Route exact path='/log' element={<Login />} ></Route>
       </Routes> */}
-      <Login/>
-      
+      <Login />
+      <SignUp />
       <DashboardContainer />
     </div>
   );
