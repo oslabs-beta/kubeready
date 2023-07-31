@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LoginAndLogoutContainer = () => {
+const LogoutContainer = () => {
   return (
     <div id='login-and-logout-container'>
       {/* <button id='login-button'>Login</button> */}
@@ -9,4 +9,4 @@ const LoginAndLogoutContainer = () => {
   );
 };
 
-export default LoginAndLogoutContainer;
+export default LogoutContainer;

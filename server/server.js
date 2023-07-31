@@ -3,18 +3,20 @@ const express = require('express');
 const app = express();
 const path = require('path');
 // require in routes
-const routes = require('./routes/routes.js');
+const router = require('./routes/routes.js');
 // assign the PORT (3001)
 const PORT = 3001;
+//used to parse all incoming requests from JSON to JS from the client
+app.use(express.json());
 
 const mongoose = require('mongoose');
 // ** testing to see if connections work first, then will need to refactor mongoDB connections into .env **
-const myURI =
-  'mongodb+srv://serenahromano2000:<E17s30FqKCRZoW5t>@cluster0.krvanjb.mongodb.net/';
-const URI = process.env.MONGO_URI || myURI;
+// const myURI =
+//   'mongodb+srv://serenahromano2000:<E17s30FqKCRZoW5t>@cluster0.krvanjb.mongodb.net/';
+// const URI = process.env.MONGO_URI || myURI;
 
 mongoose.connect(
-  'mongodb+srv://serenahromano2000:passwordforURI@cluster0.x9zlw6i.mongodb.net/',
+  'mongodb+srv://serenahromano2000:E17s30FqKCRZoW5t@cluster0.krvanjb.mongodb.net/',
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 mongoose.connection.once('open', () => {
