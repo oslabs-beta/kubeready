@@ -5,7 +5,7 @@ const path = require('path');
 // require in routes
 const routes = require('./routes/routes.js');
 // assign the PORT
-const PORT = 3000;
+const PORT = 3001;
 
 // handle environment-specific serving
 if (process.env.NODE_ENV === 'production') {
