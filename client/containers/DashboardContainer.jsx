@@ -2,13 +2,11 @@ import React from 'react';
 
 const DashboardContainer = () => {
   return (
-    <div>
-      <p>dashboard container</p>
+    <div id='dashboard-container'>
       <iframe
-        title=''
-        src='http://127.0.0.1:57640/d/b70170ce-5631-4b0f-b8f2-d1c92bbff59b/kubernetes-cluster-visual?orgId=1&from=1690412518649&to=1690412818649'
-        height='700px'
-        width='700px'
+        id='dashboard-iframe'
+        title='My Dashboard'
+        src='http://localhost:3000/d/a0afe1e1-2cd8-4263-9101-5eafd2efb98e/prometheus-scrapes-from-demo-apps?from=1690453995180&to=1690475595180&orgId=1'
       ></iframe>
     </div>
   );
