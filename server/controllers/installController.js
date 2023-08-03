@@ -1,4 +1,4 @@
-
+import { spawn, spawnSync } from 'child_process';
 
 const installControler = {
   //Install Prometheus
@@ -37,7 +37,8 @@ const installControler = {
     //Install the kube-prometheus-stack Helm chart from the prometheus-community repository.
     //I'm not sure why we would need this if we have our own dashboard. 
     const installKubePromStack = spawnSync(
-      'helm install prometheus prometheus-community/kube-prometheus-stack'
+      'helm install prometheus prometheus-community/kube-prometheus-stack',
+      { stdio: 'inherit', shell: true }
     )
 
     if (installKubePromStack.stderr) {
@@ -50,10 +51,81 @@ const installControler = {
     }
   },
 
-  embedGrafana: (req, res, next) => {
-    const child = spawnSync('kubectl', ['get', 'pods'], { encoding: 'utf-8' });
+  recreatePromGraf: (req, res, next) => {
+    const kubectlGetPods = spawnSync('kubectl', ['get', 'pods'], { encoding: 'utf-8' });
 
+    if (kubectlGetPods.stderr) {
+      console.log(`kubectl get pods error: ${kubectlGetPods.stderr}`);
+      return next({
+        log: 'Error on embedGrafana middleware.',
+        status: 500,
+        message: {err: 'An error occurred when trying get a list of kubernetes pods.'}
+      })
+    }
 
+    //  Assigning the console statement to a constant
+    const kubectlGetPodsText = kubectlGetPods.stdout.split('\n');
+    
+    kubectlGetPodsText.forEach(line => {
+      if (line.includes('prometheus-grafana')) pod = line.split(' ')[0];
+    })
+
+    //  Searching for the prometheus-grafana pod
+    let pod;
+    kubectlGetPodsText.forEach((line) => {
+      if (line.includes('prometheus-grafana')) {
+        pod = line.split(' ');
+      }
+    });
+
+    const deleteConfigmap = spawnSync(
+      'kubectl delete configmap prometheus-grafana', 
+      { stdio: 'inherit', shell: true }
+    );
+
+    if (deleteConfigmap.stderr) {
+      console.log(`deleting prometheus-grafana configmap error: ${deleteConfigmap.stderr}`);
+      return next({
+        log: 'Error on embedGrafana middleware.',
+        status: 500,
+        message: {err: 'An error occurred when trying to delete the prometheus-grafana Configmap.'}
+      })
+    };
+
+    //  Applying custom yaml file
+    const applyPromGrafYaml = spawnSync(
+      'kubectl apply -f prometheus-grafana.yaml', 
+      { stdio: 'inherit', shell: true }
+    );
+
+    if (applyPromGrafYaml.stderr) {
+      console.log(`creating new prometheus-grafana configmap error: ${applyPromGrafYaml.stderr}`);
+      return next({
+        log: 'Error on embedGrafana middleware.',
+        status: 500,
+        message: {err: 'An error occurred when trying to create a new configmap with prometheus-grafana.yaml.'}
+      })
+    };
+
+    //  Delete old prometheus-grafana pod
+    const deletePromGrafPod = spawnSync(
+      `kubectl delete pod ${pod}`, 
+      { stdio: 'inherit', shell: true }
+    );
+
+    if (deletePromGrafPod.stderr) {
+      console.log(`deleting prometheus-grafana configmap error: ${applyPromGrafYaml.stderr}`);
+      return next({
+        log: 'Error on embedGrafana middleware.',
+        status: 500,
+        message: {err: 'An error occurred when trying to delete the prometheus-grafana Configmap.'}
+      })
+    };
+
+    const deleteOldPod = spawnSync(
+      `kubectl delete pod ${pod}`, 
+      { stdio: 'inherit', shell: true }
+    );
   }
 }
 
