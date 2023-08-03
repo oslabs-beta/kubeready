@@ -8,9 +8,10 @@ import userEvent from '@testing-library/user-event';
 // import the login function (or whatever it's actually called)
 const { } = require('');
 
-beforeEach(() => {
+beforeAll(() => {
   // not sure what to put here
   // listen for server?
+  server.listen();
 })
 
 afterEach(() => {
@@ -46,14 +47,24 @@ describe('login page', () => {
     })
     test('user is navigated to dashboard after entering correct login credentials', async () => {
       // create a login button, username, and pass
-
+      const loginButton = screen.getByRole('button', {name: 'Login'});
+      const userInput = screen.getByPlaceholderText('Username')
+      const passwordInput = screen.getByPlaceholderText('Password');
       // user types in correct user and pass
-
+      await userEvent.type(userInput, 'testuser')
+      await userEvent.type(passwordInput, 'testpassword')
       // assert the correct user and pass
-
+      expect(userInput.value).toBe('testuser')
+      expect(passwordInput.value).toBe('testpassword')
       // user clicks login button
-
+      await userEvent.click(loginButton);
       // assert that the dashboard is in the document
+      waitFor(async() => {
+        // *NOTE* REPLACE IFRAME NAME HERE
+        await screen.findByTitle('NAME OF IFRAME')
+        // assertion: expect the iframe to be in the document
+        expect(screen.findByTitle('NAME OF THE IFRAME')).toBeInTheDocument();
+      })
     })
     test ('user sees error message after loggin in with incorrect credentials', () => {
       // creat a login button, username, and pass
