@@ -33,6 +33,8 @@ body {
   padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
+  display: flex;
+  width: 500px;
 }
 
 #dashboard-container {
@@ -49,6 +51,9 @@ body {
 
 #login-and-logout-container {
   display: flex;
+  position: absolute;
+  right: 0px;
+  margin: auto;
 }
 
 #login-button,
@@ -70,4 +75,21 @@ body {
 #login-button:hover,
 #logout-button:hover {
   opacity: 80%;
+}
+
+.login {
+  text-align: center;
+}
+
+.signUp {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
 }
