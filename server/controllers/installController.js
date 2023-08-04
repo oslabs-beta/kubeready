@@ -63,20 +63,14 @@ const installControler = {
       })
     }
 
-    //  Assigning the console statement to a constant
+    //In an array, separate each line of the result of running "kubectl run pods".
     const kubectlGetPodsText = kubectlGetPods.stdout.split('\n');
     
+    //Find the pod that contains "prometheus-grafana".
+    let pod;
     kubectlGetPodsText.forEach(line => {
       if (line.includes('prometheus-grafana')) pod = line.split(' ')[0];
     })
-
-    //  Searching for the prometheus-grafana pod
-    let pod;
-    kubectlGetPodsText.forEach((line) => {
-      if (line.includes('prometheus-grafana')) {
-        pod = line.split(' ');
-      }
-    });
 
     const deleteConfigmap = spawnSync(
       'kubectl delete configmap prometheus-grafana', 
@@ -126,7 +120,45 @@ const installControler = {
       `kubectl delete pod ${pod}`, 
       { stdio: 'inherit', shell: true }
     );
+
+    if (deleteOldPod.stderr) {
+      console.log(`deleting old pod error: ${deleteOldPod.stderr}`);
+      return next({
+        log: 'Error on embedGrafana middleware.',
+        status: 500,
+        message: {err: 'An error occurred when trying to delete the old pod.'}
+      })
+    };
+  },
+
+  portForward: (req, res, next) => {
+
+    //Declare a port to independently display and access Grafana. 
+    const PORT = 3000;
+
+    //Asyncronously forward prometheus-grafana to the PORT.
+    const portFw = spawn(
+      `kubectl port-forward deployment/prometheus-grafana ${PORT}`,
+      { shell: true }
+    );
+
+    //When the process has started, move on to the next middleware. 
+    portFw.on('spawn', () => {
+      console.log(`The process of port forwarding to ${PORT} has started successfully.`);
+      return next();
+    });
+
+    //If there's an error, 
+    portFw.stderr.on('data', (data) => {
+      console.log(`port forwarding prometheus-grafana to PORT ${PORT} \n error: ${portFw.stderr} \n data: ${data}`);
+      return next({
+        log: 'Error on portForward middleware.',
+        status: 500,
+        message: {err: `An error occurred when trying to forward the prometheus-grafana port to PORT ${PORT}.`}
+      });
+    });
   }
+
 }
 
 export default installController;
