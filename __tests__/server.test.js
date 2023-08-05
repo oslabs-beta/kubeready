@@ -1,4 +1,15 @@
 // require in dependencies
+const request = require('supertest');
+const server = 'http://localhost:3000'
+
+
+// before all
+
+
+// after all
+
+
+
 
 
 it('should return a valid authentication token when given correct credentials', async () => {
