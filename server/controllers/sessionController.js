@@ -2,6 +2,7 @@ const Session = require('../models/sessionModel');
 
 const SessionController = {
   startSession: async (req, res, next) => {
+    console.log('We entered the Session Controller');
     try {
       await Session.findOneAndUpdate(
         { cookieId: res.locals.user.id },
@@ -19,7 +20,7 @@ const SessionController = {
   },
 };
 
-export default SessionController;
+module.exports = SessionController;
 
 // isLoggedIn : (req,res,next) => {
 //     Session.findOne({ cookieID: res.cookies.ssid }, {

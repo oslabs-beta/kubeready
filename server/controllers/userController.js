@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const UserController = {
   // middleware to CREATE A USER
   createUser: async (req, res, next) => {
+    console.log('We entered the User Controller');
     try {
       // Destructure name, password, and username from the request body
       const { name, password, username, email } = req.body;
@@ -108,6 +109,7 @@ const UserController = {
       });
   },
 };
+
 module.exports = UserController;
 
 //VERIFY USER B4 COOKIE STUFF
