@@ -6,6 +6,7 @@ const path = require('path');
 const router = require('./routes/routes.js');
 // assign the PORT (3001)
 const PORT = 3001;
+const authController = require('./controllers/authController.js');
 //used to parse all incoming requests from JSON to JS from the client
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -21,23 +22,23 @@ mongoose.connection.once('open', () => {
 });
 
 // handle environment-specific serving
-if (process.env.NODE_ENV === 'production') {
-  // // serve these files
-  // app.use(express.static('./build/bundle)'));
+//if (process.env.NODE_ENV === 'production') {
+// // serve these files
+// app.use(express.static('./build/bundle)'));
 
-  // statically serve everything in the build folder on the route '/'
-  //CHANGED ROUTE FROM /BUILD TO '/' - WAS RENDERING REACT APP IF U DID LOCALHOST:3000/BUILD
-  // app.use('/', express.static(path.join(__dirname, '../build/')));
-  app.use(express.static(path.join(__dirname, '../build/')));
+// statically serve everything in the build folder on the route '/'
+//CHANGED ROUTE FROM /BUILD TO '/' - WAS RENDERING REACT APP IF U DID LOCALHOST:3000/BUILD
+// app.use('/', express.static(path.join(__dirname, '../build/')));
+//app.use(express.static(path.join(__dirname, '../build/')));
 
-  // serve index.html on the route '/'
-  //TRYING THIS OUT - COMMENTING OUT THIS ROUTE
-  // app.get('/', (req, res) => {
-  //   return res
-  //     .status(200)
-  //     .sendFile(path.join(__dirname, '../client/index.html'));
-  // });
-}
+// serve index.html on the route '/'
+//TRYING THIS OUT - COMMENTING OUT THIS ROUTE
+// app.get('/', (req, res) => {
+//   return res
+//     .status(200)
+//     .sendFile(path.join(__dirname, '../client/index.html'));
+// });
+//}
 
 // Serve static files from the assets folder.
 //FOR FUTURE
@@ -45,17 +46,25 @@ if (process.env.NODE_ENV === 'production') {
 app.use(express.static(path.resolve(__dirname, '../build/')));
 // client / login.html;
 // Route for serving index.html
-app.get('/', (req, res) => {
+app.get('/', authController.verifyJwt, (req, res) => {
+  // if user is recognized with token
+  // if (res.locals.hasToken) {
+  //   //send them to /homepage for dashboards
+  //   res.
+  // }
+  // // otherwise send them to login page at index
+  // else {
   res.sendFile(path.resolve(__dirname, '../client/index.html'));
+  // }
 });
 
 // app.get('*', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../build', '../client/index.html'));
 // });
 
-// app.get('/signup', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, '../client/index.html'));
-// });
+app.get('/signup', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/index.html'));
+});
 
 // app.get('/homepage', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../client/index.html'));
@@ -89,6 +98,11 @@ app.use((req, res, next) => {
   res.setHeader('Content-Type', contentType);
   // move on to next middleware in chain
   next();
+});
+
+//FOR LOGOUT
+router.post('/api/logout', (req, res) => {
+  return res.status(201);
 });
 
 // catch-all error handler

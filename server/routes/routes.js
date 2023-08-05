@@ -10,8 +10,10 @@ router.post('/signup', UserController.createUser, (req, res) => {
   return res.status(201).json(res.locals.createdUser);
 });
 
+//route handler for a post req to the /login endpoint
 router.post('/login', UserController.verifyUser, (req, res) => {
   return res.status(201).json(res.locals.user);
 });
+
 
 module.exports = router;

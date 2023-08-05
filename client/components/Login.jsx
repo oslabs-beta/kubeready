@@ -8,7 +8,7 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  // form handleChanges
+  // form handleChanges - grabs data from username/password forms and adds them to state
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };

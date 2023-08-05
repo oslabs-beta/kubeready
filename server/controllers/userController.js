@@ -59,6 +59,7 @@ const UserController = {
           return next('Username or password is not found.');
           //ow, if the username is found
         } else {
+          //use bcrypt compare to compare pws!
           bcrypt.compare(password, user.password).then((result) => {
             //if the stored passwords do not match, return error
             if (!result) {
@@ -66,11 +67,11 @@ const UserController = {
             } else {
               //declare JWT token
               const token = jwt.sign({ userId: user._id }, '123abc');
-              //
+              //create the cookie- name & val of token
               res.cookie('kubereadyToken', token, {
+                //to secure it
                 httpOnly: true,
               });
-
               //if the stored passwords match, save user in res.locals
               res.locals.user = user;
               // console.log('it worked');
