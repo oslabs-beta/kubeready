@@ -5,19 +5,21 @@ const request = require('supertest');
 const server = 'http://localhost:5050'
 // generate test username with the current timestamp
 const testUserName = `test${Date.now()}`;
+// define varable to hold auth token for the test user
+let authToken;
 
-// before running any tests, perform a signup request to create a test user
-beforeAll(() => {
+// before each test, perform a signup request to create a test user
+beforeEach(async () => {
   // send a POST request to the signup endpoint with the test username and password and return the result as a promise
-  return request(server)
+  await request(server)
     .post('/signup')
     .send({ username: testUserName, password: '12345'});
 });
 
 // after all tests are completed, delete the test user created during signup
-afterAll(() => {
+afterEach(async () => {
   // send a POST request to the delete endpoint with the test username and password and return the result as a promise
-  return request(server)
+  await request(server)
     .post('/delete')
     .send({ username: testUserName, password: '12345'});
 });
@@ -58,15 +60,21 @@ describe('backend', () => {
         .send({ username: testUserName, password: '12345'})
         .expect(201)
         .expect('Content-Type', /application\/json/)
+        .then((res) => {
+          // store auth token for further tests
+          authToken = res.body.token;
+        });
     }, 25000) // set a timeout of 25000 ms (25 s)
 
-    it('should return 401 with invalid user credentials', () => {
-      // send a POST request to the login endpoint with the invalid user credentials and expect the response status code to be 401 and the content-type header to be application/json
-      return request(server)
-        .post('/login')
-        .send({ username: 'test' })
-        .expect(401)
-        .expect('Content-Type', /application\/json/)
-    });
+    // **NOTE**: noticed that the test below is essentially testing the same functionality as a test on the login test file
+
+    // it('should return 401 with invalid user credentials', () => {
+    //   // send a POST request to the login endpoint with the invalid user credentials and expect the response status code to be 401 and the content-type header to be application/json
+    //   return request(server)
+    //     .post('/login')
+    //     .send({ username: 'test' })
+    //     .expect(401)
+    //     .expect('Content-Type', /application\/json/)
+    // });
   });
 });

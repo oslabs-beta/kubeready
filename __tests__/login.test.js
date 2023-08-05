@@ -52,6 +52,7 @@ describe('login page', () => {
         </MemoryRouter>
       )
     })
+    // **note** - the test below is an integration test, considering that we're testing multiple components
     test('user is navigated to dashboard after entering correct login credentials', async () => {
       // create a login button, username, and pass
       const loginButton = screen.getByRole('button', {name: 'Login'});
