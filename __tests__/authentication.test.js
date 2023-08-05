@@ -1,4 +1,4 @@
-// import the 'supertest' library for testing HTTP endpoints
+// import the 'supertest' library for testing HTTP endpoints to run tests
 const request = require('supertest');
 // set server URL to localhost 5050
 const server = 'http://localhost:5050'

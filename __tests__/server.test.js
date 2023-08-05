@@ -1,4 +1,4 @@
-// require in dependencies
+// require in dependencies to run tests to run tests
 // import the 'supertest' library for testing HTTP endpoints
 const request = require('supertest');
 // set server URL to localhost 5050

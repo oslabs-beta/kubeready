@@ -1,4 +1,4 @@
-//imports
+//imports to run tests
 import React from 'react';
 //will need to import SignUp component
 //import SignUpPage from
