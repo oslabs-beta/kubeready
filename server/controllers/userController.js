@@ -66,15 +66,15 @@ const UserController = {
               return next('Username or password is not found.');
             } else {
               //declare JWT token
-              const token = jwt.sign({ userId: user._id }, '123abc');
-              //create the cookie- name & val of token
-              res.cookie('kubereadyToken', token, {
-                //to secure it
-                httpOnly: true,
-              });
+              // const token = jwt.sign({ userId: user._id }, '123abc');
+              // //create the cookie- name & val of token
+              // res.cookie('kubereadyToken', token, {
+              //   //to secure it
+              //   httpOnly: true,
+              // });
               //if the stored passwords match, save user in res.locals
               res.locals.user = user;
-              // console.log('it worked');
+              if (user.urls) res.locals.URLS = user.urls[0];
               return next();
             }
           });
@@ -87,6 +87,23 @@ const UserController = {
           message: {
             error: 'Error in finding the username or password',
           },
+        });
+      });
+  },
+  addUrls: (req, res, next) => {
+    if (res.locals.generatedDash === false) {
+      return next();
+    }
+    const userID = res.locals.user.id;
+    User.findOneAndUpdate({ _id: userID }, { $push: { urls: res.locals.URLS } })
+      .then((user) => {
+        return next();
+      })
+      .catch((err) => {
+        next({
+          log: 'error!',
+          status: 500,
+          message: { err: 'error occured!' },
         });
       });
   },

@@ -6,7 +6,7 @@ const path = require('path');
 const router = require('./routes/routes.js');
 // assign the PORT (3001)
 const PORT = 3001;
-const authController = require('./controllers/authController.js');
+//const authController = require('./controllers/authController.js');
 //used to parse all incoming requests from JSON to JS from the client
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -46,7 +46,7 @@ mongoose.connection.once('open', () => {
 app.use(express.static(path.resolve(__dirname, '../build/')));
 // client / login.html;
 // Route for serving index.html
-app.get('/', authController.verifyJwt, (req, res) => {
+app.get('/', (req, res) => {
   // if user is recognized with token
   // if (res.locals.hasToken) {
   //   //send them to /homepage for dashboards
@@ -62,9 +62,9 @@ app.get('/', authController.verifyJwt, (req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../build', '../client/index.html'));
 // });
 
-app.get('/signup', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/index.html'));
-});
+// app.get('/signup', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../client/index.html'));
+// });
 
 // app.get('/homepage', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../client/index.html'));
