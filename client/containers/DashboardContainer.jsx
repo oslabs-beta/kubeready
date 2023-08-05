@@ -2,6 +2,8 @@ import React from 'react';
 import LogoutContainer from './LogoutContainer.jsx';
 
 const DashboardContainer = () => {
+
+  
   return (
     <div id='dashboard-container'>
       <div id='names-metrics-text'>

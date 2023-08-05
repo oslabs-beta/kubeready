@@ -2,15 +2,13 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-// require in routes
+const mongoose = require('mongoose');
 const router = require('./routes/routes.js');
-// assign the PORT (3001)
+
 const PORT = 3001;
-//used to parse all incoming requests from JSON to JS from the client
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-const mongoose = require('mongoose');
 
 mongoose.connect(
   'mongodb+srv://serenahromano2000:E17s30FqKCRZoW5t@cluster0.krvanjb.mongodb.net/',
@@ -22,32 +20,17 @@ mongoose.connection.once('open', () => {
 
 // handle environment-specific serving
 if (process.env.NODE_ENV === 'production') {
-  // // serve these files
-  // app.use(express.static('./build/bundle)'));
-
-  // statically serve everything in the build folder on the route '/'
-  //CHANGED ROUTE FROM /BUILD TO '/' - WAS RENDERING REACT APP IF U DID LOCALHOST:3000/BUILD
-  // app.use('/', express.static(path.join(__dirname, '../build/')));
   app.use(express.static(path.join(__dirname, '../build/')));
-
-  // serve index.html on the route '/'
-  //TRYING THIS OUT - COMMENTING OUT THIS ROUTE
-  // app.get('/', (req, res) => {
-  //   return res
-  //     .status(200)
-  //     .sendFile(path.join(__dirname, '../client/index.html'));
-  // });
 }
 
-// Serve static files from the assets folder.
-//FOR FUTURE
-//was client
 app.use(express.static(path.resolve(__dirname, '../build/')));
-// client / login.html;
-// Route for serving index.html
+
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });
+
+app.use('/login', loginRouter);
+app.use('/signup', signupRouter);
 
 // app.get('*', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../build', '../client/index.html'));
@@ -60,10 +43,6 @@ app.get('/', (req, res) => {
 // app.get('/homepage', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../client/index.html'));
 // });
-
-//invoking routes middleware for any incoming HTTP requests
-// /api is path - telling it to look at router
-app.use('/api', router);
 
 // set content-type header based on file extension
 app.use((req, res, next) => {
