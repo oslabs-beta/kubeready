@@ -43,7 +43,7 @@ const SignUp = () => {
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error('User was not created');
+          throw new Error('User was not created - response error');
         }
         return response.json();
       })
@@ -56,7 +56,7 @@ const SignUp = () => {
       //handle error here
       .catch((error) => {
         setIsLoading(false);
-        console.log('User was not created.');
+        console.log('User was not created - catch error');
       });
   };
 
@@ -95,7 +95,7 @@ const SignUp = () => {
         <input
           className='signup-input'
           name='password'
-          type='text'
+          type='password'
           placeholder='Create Password'
           onChange={handlePasswordChange}
           value={password}

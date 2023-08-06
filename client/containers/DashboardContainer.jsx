@@ -11,7 +11,7 @@ const DashboardContainer = () => {
       <iframe
         id='dashboard-iframe'
         title='My Dashboard'
-        src='http://localhost:3000/d/a0afe1e1-2cd8-4263-9101-5eafd2efb98e/prometheus-scrapes-from-demo-apps?orgId=1&refresh=5s&from=1690467986007&to=1690489586007'
+        src='http://localhost:3000/d/ed7e00e0-5b20-4bef-8422-c2a2817822c0/kubeready-dashboard?orgId=1'
       ></iframe>
     </div>
   );
