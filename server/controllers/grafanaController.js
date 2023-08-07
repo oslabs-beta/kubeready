@@ -1,4 +1,4 @@
-const dashboard = require('../dashboards/dashboard.json');
+const allPanels = require('../panels/allPanels.json');
 
 //initialize an empty object that will house dashboard URL
 const urlStorage = {};
@@ -33,7 +33,7 @@ const grafanaController = {
           schemaVersion: 16,
           version: 0,
           refresh: '25s',
-          panels: dashboard,
+          panels: allPanels,
         },
         folderID: 0,
         message: '',
