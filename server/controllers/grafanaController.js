@@ -10,7 +10,7 @@ const grafanaController = {
     console.log('entered getApiToken in Grafana Controller');
 
     const getToken = spawnSync(
-      'curl -X POST -H "Content-Type: application/json" -d \'{"name":"apikeycurl0", "role": "Admin"}\' https://admin:$(kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-password}" | base64 --decode)@localhost:3000/api/auth/keys > grafana/api_token.json',
+      'curl -s -X POST -H "Content-Type: application/json" -H "Cookie: grafana_session=$session" -d \'{"name":"apikeycurl0", "role": "Admin"}\' http://localhost:3000/api/auth/keys > grafana/apitoken.json',
       { stdio: 'inherit', shell: true }
     );
 
@@ -82,8 +82,9 @@ const grafanaController = {
           message: {
             err: error,
           }
+        });
       });
-  },
+  }
 };
 
 module.exports = grafanaController;
