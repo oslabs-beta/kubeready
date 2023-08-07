@@ -1,4 +1,5 @@
 const allPanels = require('../panels/allPanels.json');
+//const { fetch } = require('node-fetch');
 
 //initialize an empty object that will house dashboard URL
 const urlStorage = {};
@@ -13,7 +14,9 @@ const grafanaController = {
     //if there's already a url, skip
     if (res.locals.URL) return next();
 
-    console.log('res.locals.url DOES NOT EXIST YET');
+    console.log(
+      'this message is right before the POST requests in grafanaController.js'
+    );
 
     //Send a POST request with details about the new dashboard.
     fetch('http://localhost:3000/api/dashboards/db', {
@@ -40,7 +43,10 @@ const grafanaController = {
         overwrite: false,
       }),
     })
-      .then((data) => data.json())
+      .then((data) => {
+        console.log('this is returned data from the POST request', data);
+        data.json();
+      })
       .then((data) => {
         console.log('retrieved data back from POST request');
         //Create a dashboard URL from the returned data.

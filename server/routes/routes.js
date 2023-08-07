@@ -19,12 +19,13 @@ router.post(
   '/login',
   UserController.verifyUser,
   // installController.installPrometheus,
-  installController.recreatePromGraf,
-  installController.portForward,
-  grafanaController.generateDashboard,
-  UserController.addUrls,
+  // installController.recreatePromGraf,
+  // installController.portForward,
+  // grafanaController.generateDashboard,
+  // UserController.addUrls,
   SessionController.startSession,
   CookieController.setCookie,
+  SessionController.checkCookie,
   (req, res) => {
     return res.status(201).json(res.locals.user);
   }

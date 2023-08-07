@@ -4,6 +4,7 @@ const app = express();
 const path = require('path');
 // require in routes
 const router = require('./routes/routes.js');
+const SessionController = require('./controllers/sessionController.js');
 // assign the PORT (3001)
 const PORT = 3001;
 //const authController = require('./controllers/authController.js');
@@ -58,6 +59,14 @@ app.get('/', (req, res) => {
   // }
 });
 
+app.get('/homepage', SessionController.checkCookie, (req, res) => {
+  if (res.locals.hasCookie) {
+    res.status(200).redirect('/homepage');
+  } else {
+    res.status(401).send('NO COOKIE FOUND');
+  }
+});
+
 // app.get('*', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../build', '../client/index.html'));
 // });
@@ -100,7 +109,7 @@ app.use((req, res, next) => {
   next();
 });
 
-//FOR LOGOUT
+//FOR LOGOUT - probably move to routes.js later
 router.post('/api/logout', (req, res) => {
   return res.status(201);
 });

@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const UserController = {
   // middleware to CREATE A USER
   createUser: async (req, res, next) => {
-    console.log('We entered the User Controller');
+    console.log('We entered the createUser in the User Controller');
     try {
       // Destructure name, password, and username from the request body
       const { name, password, username, email } = req.body;
@@ -45,6 +45,7 @@ const UserController = {
   },
 
   verifyUser: (req, res, next) => {
+    console.log('We entered the verifyUser in the User Controller');
     const { username, password } = req.body;
     // console.log(req.body, 'reqbody');
     // console.log(username, 'username');
@@ -92,6 +93,7 @@ const UserController = {
       });
   },
   addUrls: (req, res, next) => {
+    console.log('We entered the addUrls in the User Controller');
     if (res.locals.generatedDash === false) {
       return next();
     }
