@@ -61,8 +61,10 @@ app.get('/', (req, res) => {
 
 app.get('/homepage', SessionController.checkCookie, (req, res) => {
   if (res.locals.hasCookie) {
+    console.log('serving /homepage successfully');
     res.status(200).redirect('/homepage');
   } else {
+    console.log('no cookie found - you should not see /homepage');
     res.status(401).send('NO COOKIE FOUND');
   }
 });

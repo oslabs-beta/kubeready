@@ -21,11 +21,11 @@ const SessionController = {
   },
   checkCookie: (req, res, next) => {
     console.log('we entered sessionController.checkCookie');
-    const { cookieId } = req.cookies.token;
+    const { cookieId } = req.cookies;
     console.log('cookieId looks like this: ', cookieId);
     Session.findOne({ cookieId })
       .then((cookie) => {
-        console.log('req.cookies.token looks like this: , req.cookies.token');
+        console.log('req.cookies.token looks like this:', req.cookies);
         if (req.cookies.token === cookie) {
           res.locals.hasCookie = true;
           console.log('added onto res.locals.hasCookie');
@@ -35,6 +35,7 @@ const SessionController = {
         return next();
       })
       .catch((error) => {
+        console.log('encountered error in checkCookie');
         return next({
           log: 'Error occured in sessionController.checkCookie',
           status: 500,

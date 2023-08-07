@@ -25,7 +25,6 @@ router.post(
   // UserController.addUrls,
   SessionController.startSession,
   CookieController.setCookie,
-  SessionController.checkCookie,
   (req, res) => {
     return res.status(201).json(res.locals.user);
   }
