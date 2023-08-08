@@ -39,7 +39,7 @@ const grafanaController = {
     if (res.locals.URL) return next();
 
     //Send a POST request with details about the new dashboard.
-    fetch('http://localhost:3000/api/dashboards/db', {
+    fetch('http://admin:prom-operator@localhost:3000/api/dashboards/db', {
       //add to method param of fetch req: to specify which HTTP method used in request
       method: 'POST',
       headers: {

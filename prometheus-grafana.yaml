@@ -6,7 +6,7 @@ data:
     = console\n[paths]\ndata = /var/lib/grafana/\nlogs = /var/log/grafana\nplugins
     = /var/lib/grafana/plugins\nprovisioning = /etc/grafana/provisioning\n[server]\ndomain
     = ''\n[security] \nallow_embedding = true\n[auth.anonymous] \nenabled = true \norg_role
-    = Admin"
+    = Admin\n[users] \ndefault_org_role = Admin"
 kind: ConfigMap
 metadata:
   annotations:
