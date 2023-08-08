@@ -9,10 +9,16 @@ const installController = require('../controllers/installController.js');
 
 //route handler for a post request to the /signup endpoint
 //CREATING A USER
-router.post('/signup', UserController.createUser, (req, res) => {
-  //console.log('reached routes.js after UserController.createUser middleware')
-  return res.status(201).json(res.locals.createdUser);
-});
+router.post(
+  '/signup',
+  UserController.createUser,
+  SessionController.startSession,
+  CookieController.setCookie,
+  (req, res) => {
+    //console.log('reached routes.js after UserController.createUser middleware')
+    return res.status(201).json(res.locals.user);
+  }
+);
 
 //route handler for a post req to the /login endpoint
 router.post(
@@ -21,6 +27,7 @@ router.post(
   // installController.installPrometheus,
   // installController.recreatePromGraf,
   // installController.portForward,
+  // // grafanaController.getApiToken,
   // grafanaController.generateDashboard,
   // UserController.addUrls,
   SessionController.startSession,

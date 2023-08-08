@@ -35,7 +35,11 @@ const UserController = {
       const savedUser = await newUser.save();
 
       //console.log('adding createdUser to res.locals');
-      res.locals.createdUser = savedUser;
+      res.locals.user = savedUser;
+      console.log(
+        'user has been created - this is what it looks like: ',
+        res.locals.user
+      );
 
       return next();
     } catch (error) {

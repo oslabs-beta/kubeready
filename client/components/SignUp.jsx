@@ -48,10 +48,12 @@ const SignUp = () => {
         return response.json();
       })
       // IF SUCCESSFUL send to dashboard page
-      .then((createdUser) => {
+      .then((user) => {
         console.log('User has been created.');
         setIsLoading(false);
+        console.log('right before user is navigated to /homepage');
         navigate('/homepage');
+        console.log('user has been navigated to /homepage');
       })
       //handle error here
       .catch((error) => {

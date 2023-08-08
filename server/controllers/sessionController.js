@@ -3,6 +3,10 @@ const Session = require('../models/sessionModel');
 const SessionController = {
   startSession: async (req, res, next) => {
     console.log('We entered the Session Controller startSession');
+    console.log(
+      'this is what res.locals.user.id looks like: ',
+      res.locals.user.id
+    );
     try {
       await Session.findOneAndUpdate(
         { cookieId: res.locals.user.id },
