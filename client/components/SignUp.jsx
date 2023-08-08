@@ -75,7 +75,6 @@ const SignUp = () => {
           onChange={handleNameChange}
           value={name}
         />
-        <br />
         <input
           className='signup-input'
           name='email'
@@ -84,7 +83,6 @@ const SignUp = () => {
           onChange={handleEmailChange}
           value={email}
         />
-        <br />
         <input
           className='signup-input'
           name='username'
@@ -93,7 +91,6 @@ const SignUp = () => {
           onChange={handleUsernameChange}
           value={username}
         />
-        <br />
         <input
           className='signup-input'
           name='password'
@@ -102,7 +99,6 @@ const SignUp = () => {
           onChange={handlePasswordChange}
           value={password}
         />
-        <br />
         <button type='submit' className='signup-button' disabled={isLoading}>
           {/* <Link to='/homepage'>Sign Up</Link> */}
           Sign Up
