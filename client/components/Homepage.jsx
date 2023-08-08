@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import Dashboard from "../containers/DashboardContainer.jsx";
+import Dashboard from "../containers/Dashboard.jsx";
 import { Link } from 'react-router-dom';
 
 const Homepage = () => {
@@ -19,8 +19,7 @@ const Homepage = () => {
                     </button>
                 </div>
             </header>
-
-            {/* Dashboard */}
+            <iframe id='dashboard-iframe' title='My Dashboard' src='http://localhost:3000/d/fe3fe54b-0830-42bc-8012-0219b44f4234/kubeready?orgId=1'></iframe>
             <Dashboard />
         </div>
     );
