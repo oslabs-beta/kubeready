@@ -1,11 +1,13 @@
 @import '_colorpalette';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 // All pages
 body {
-  background-color: rgb(17, 18, 23);
-  margin: 0;
+  background-color: rgb(255, 255, 255);
+  margin: 10%;
   padding: 0;
   height: 100%;
   overflow: hidden;
+  // display: flex; // commenting out just for testing
 }
 
 // Metrics page
@@ -19,7 +21,25 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: $darker;
+  width: 50%;
+  padding: 0 10px;
 }
+
+// div.login {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   width: 50%;
+// }
+
+// #form {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   width: 50%;
+// }
 
 #title {
   color: $lighter;
@@ -58,7 +78,7 @@ body {
   margin: auto;
 }
 
-#login-button,
+// #login-button,
 #logout-button {
   border: none;
   background-color: $light;
@@ -74,29 +94,133 @@ body {
   background-color: rgb(183, 183, 183);
 }
 
-#login-button:hover,
-#logout-button:hover {
-  opacity: 80%;
+// #login-button:hover,
+// #logout-button:hover {
+//   opacity: 80%;
+// }
+
+// .login {
+//   text-align: center;
+// }
+//possibly wrap both left and rt container into a div 
+.mainContainer{
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
 }
 
-.login {
-  text-align: center;
-}
-
+//sign up lives within rightContainer 
 .signUp {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
+  font-size: x-large;
+
 }
 
-a {
-  text-decoration: none;
+.leftContainer {
+  //  box-shadow: 0px;
+   flex: 1;
+   top: 50%;
+  //  left: 200px; // commenting out just for testing
+  //  transform: translate(0, -50%); // commenting out just for testing
+  //  background: linear-gradient(135deg, #e6f7ff, #cceeff);
+   padding: 20px;
+  //  box-shadow: 0px, 4px, 8px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+  //  position: fixed; // commenting out just for testing
+   justify-content: center;
+   align-items: center;
+   transition: transform 0.3s ease;
+   flex-wrap: wrap;
+   max-width: calc(50% - 20px);
+   min-width: 300px;
+   height: 50vh;
+  //  width: 100vh;
+  }
+
+
+.rightContainer {
+ justify-content: center;
+ align-items: center;
+ flex: 1;
+//  box-shadow: 0px;
+ top: 50%;
+right: 200px; // commenting out just for testing
+ padding: 50px;
+//  transform: translate(0, -50%); // commenting out just for testing
+ background: linear-gradient(135deg, #fafcfd, #30adeb);
+ padding: 20px;
+ box-shadow: 0px, 4px, 8px rgba(0, 0, 0, 0.1);
+ border-radius: 10px;
+//  position: fixed; // commenting out just for testing
+ transition: transform 0.3s ease;
+ max-width: calc(50% - 20px);
+//  min-width: 300px; 
+ width: 250px; // commenting out just for testing
+ height: 350px;
+ flex-wrap: wrap
 }
 
-a:visited {
-  text-decoration: none;
-  color: black;
+//container that holds the login-input/createAcct button
+.login {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: x-large;
 }
+
+//un pw input fields 
+.login-input{
+  background-color: rgb(255, 252, 252);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: darkblue;
+  width: 200px;
+  font-size: 16px;
+}
+//button below login
+.createAcct-button{
+  color: white;
+  background-color: rgb(8, 8, 8);
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  a {
+    color: whitesmoke; // Replace with the color you want
+  }
+}
+.login-button{
+  color: white;
+  background-color: rgb(13, 13, 13);
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.logoImage {
+  object-fit: contain;
+  width: 90%;
+  height: 20%;
+}
+
+// a {
+//   font-family: 'Roboto', sans-serif;
+//   text-decoration: none;
+// }
+
+// a:visited {
+//   font-family: 'Roboto', sans-serif;
+//   text-decoration: none;
+//   // color: rgb(21, 201, 63);
+// }
 
 #names-metrics-text {
+  font-family: 'Roboto', sans-serif;
   color: $light;
   margin-top: 0px;
   margin-bottom: 0px;

@@ -62,8 +62,10 @@ const SignUp = () => {
 
   // signup div
   return (
+    <div className = 'signUpContainer'>
     <div className='signUp'>
-      <h3 style={{ color: 'white' }}>Create your kubeready account</h3>
+      <h2 style={{color: 'white' }}>Don't Guess. Just Kubeready! </h2>
+      <h3 style={{ color: 'white' }}>Ready.Set.Go</h3>
       <form onSubmit={handleSubmit}>
         <input
           className='signup-input'
@@ -106,6 +108,7 @@ const SignUp = () => {
           Sign Up
         </button>
       </form>
+    </div>
     </div>
   );
 };

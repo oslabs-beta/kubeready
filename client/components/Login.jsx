@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import kubereadylogo from '../assets/kubereadylogo.jpg';
+
 
 const Login = () => {
   // state values and setters
@@ -49,36 +51,57 @@ const Login = () => {
   };
 
   return (
-    <div className='login'>
-      {/* <button onSubmit={handleSubmit}>Show Alert</button> */}
-      <h3 style={{ color: 'white' }}>Login to your kubeready account</h3>
-      <form onSubmit={handleSubmit}>
-        <input
-          className='login-input'
-          name='username'
-          type='text'
-          placeholder='Username'
-          onChange={handleUsernameChange}
-          value={username}
-        />
+    <div className='mainContainer'>
+    
+      <div className = 'leftContainer'>
+        {/* would like the below to be our logo - maybe? would need to upload photo in assets */}
+        <img className='logoImage' src={kubereadylogo} alt="Are you ready?" />
+      
+        <p>Before logging in: 
+          <br />
+          <li>Please install Helm</li>
+          <li>Free up Port 3000</li>
+          </p>
+          <br />
+          <button className='redirecttosplash-button'>
+            <Link to='/splash'>Learn more about </Link>
+          </button>
+        
+      </div>
+    
+      <div className = 'rightContainer'>
+        <div className='login'>
+        {/* <button onSubmit={handleSubmit}>Show Alert</button> */}
+        <h3 style={{ color: 'white' }}>Get Started</h3>
+        <form onSubmit={handleSubmit}>
+          <input
+            className='login-input'
+            name='username'
+            type='text'
+            placeholder='Username'
+            onChange={handleUsernameChange}
+            value={username}
+          />
+          <br />
+          <input
+            className='login-input'
+            name='password'
+            type='password'
+            placeholder='Password'
+            onChange={handlePasswordChange}
+            value={password}
+          />
+          <br />
+          <button type='submit' className='login-button' disabled={isLoading}>
+            Login
+          </button>
+        </form>
         <br />
-        <input
-          className='login-input'
-          name='password'
-          type='password'
-          placeholder='Password'
-          onChange={handlePasswordChange}
-          value={password}
-        />
-        <br />
-        <button type='submit' className='login-button' disabled={isLoading}>
-          Login
+        <button className='createAcct-button'>
+          <Link to='/signup'>Don't have an account?</Link>
         </button>
-      </form>
-      <br />
-      <button className='createAcct-button'>
-        <Link to='/signup'>Create an Account</Link>
-      </button>
+      </div>
+      </div>
     </div>
   );
 };

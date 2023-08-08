@@ -58,4 +58,4 @@ const Dashboard = () => {
 
 // key={graph}
 
-export default DashboardContainer;
+export default Dashboard;
