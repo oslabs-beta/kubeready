@@ -16,6 +16,29 @@
   border: none;
 }
 
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+
+  .logout-button,
+  .signup-button {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
 
 // #dashboard-typography {
 //   text-transform: uppercase;

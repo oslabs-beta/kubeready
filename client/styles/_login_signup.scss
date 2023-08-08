@@ -6,14 +6,15 @@
   font-family: 'Quicksand', sans-serif;
 }
 body {
-  display: flex;
+  display: absolute;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background: #000;
 }
 
-.login-mainContainer {
+//Background of page.
+.login-mainContainer, .signup-mainContainer {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -25,7 +26,7 @@ body {
   overflow: hidden;
 }
 
-.login-mainContainer::before {
+.login-mainContainer::before, .signup-mainContainer::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -34,6 +35,7 @@ body {
   animation: animate 5s linear infinite;
 }
 
+//Animating the background
 @keyframes animate {
   0%
   {
@@ -45,7 +47,8 @@ body {
   }
 }
 
-.login-mainContainer span {
+//Color-changing spans. 
+.login-mainContainer span, .signup-mainContainer span {
   position: relative;
   display: block;
   width: calc(6.25vw - 2px);
@@ -54,11 +57,12 @@ body {
   z-index: 2;
   transition: 1.5s;
 }
-.login-mainContainer span:hover {
+.login-mainContainer span:hover, .signup-mainContainer span:hover {
   background: $green;
   transition: 0s;
 }
-.login-mainContainer .login-rightContainer {
+
+.login-mainContainer .login-rightContainer, .signup-mainContainer .signup-box {
   position: absolute;
   width: 400px;
   background: #222;  
@@ -70,7 +74,9 @@ body {
   border-radius: 4px;
   box-shadow: 0 15px 35px rgba(0,0,0,9);
 }
-.login-mainContainer .login-rightContainer .content {
+
+//Login content positioning. 
+.login-mainContainer .login-rightContainer .content, .signup-mainContainer .signup-box .content {
   position: relative;
   width: 100%;
   display: flex;
@@ -79,23 +85,38 @@ body {
   flex-direction: column;
   gap: 40px;
 }
-.login-mainContainer .login-rightContainer .content h1 {
+.login-mainContainer .login-rightContainer .content, .signup-mainContainer .signup-box .content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.login-mainContainer .login-rightContainer .content h1, .signup-mainContainer .signup-box .content h1 {
   font-size: 2em;
   color: $green;
   text-transform: uppercase;
 }
-.login-mainContainer .login-rightContainer .content .form {
+.signup-mainContainer .signup-box .content h2 {
+  font-size: 1.5em;
+  color: $green;
+}
+
+//Login form positioning and styling. 
+.login-mainContainer .login-rightContainer .content .form, .signup-mainContainer .signup-box .content .form {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.login-mainContainer .login-rightContainer .content .form .inputBox {
+.login-mainContainer .login-rightContainer .content .form .inputBox, .signup-mainContainer .signup-box .content .form .inputBox {
   position: relative;
   width: 100%;
   margin-bottom: 20px;
 }
-.login-mainContainer .login-rightContainer .content .form .inputBox input {
+.login-mainContainer .login-rightContainer .content .form .inputBox input, .signup-mainContainer .signup-box .content .form .inputBox input {
   position: relative;
   width: 100%;
   background: #333;
@@ -107,7 +128,7 @@ body {
   font-weight: 500;
   font-size: 1em;
 }
-.login-mainContainer .login-rightContainer .content .form .inputBox i {
+.login-mainContainer .login-rightContainer .content .form .inputBox i, .signup-mainContainer .signup-box .content .form .inputBox i {
   position: absolute;
   left: 0;
   padding: 15px 10px;
@@ -122,27 +143,8 @@ body {
   font-size: 0.8em;
   color: #fff;
 }
-.login-button {
-  // border-radius: 8px;
-  // border: none;
-  // background-color: $green;
-  // color: black;
-  // padding: 10px;
-  width: 100%;
-  border-style: none;
-  border-radius: 4px;
-  background: $yellow;
-  color: #000;
-  font-weight: 600;
-  font-size: 1.35em;
-  letter-spacing: 0.05em;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  cursor: pointer;
-}
-.login-button:active {
-  opacity: 0.8;
-}
+
+//Create Account Redirecting Line
 .create-account-redirect-link {
   display: flex;
   font-size: 14px;
@@ -154,33 +156,38 @@ body {
 }
 .create-account-redirect-link .answer {
   color: $green;
+  cursor: pointer;
+  text-decoration: none;
 }
-// .signin .content .form .create-account-redirect-link {
-//   position: relative;
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-between;
-// }
-// .signin .content .form .create-account-redirect-link a {
-//   color: #fff;
-//   text-decoration: none;
-// }
-// .signin .content .form .create-account-redirect-link a:nth-child(2) {
-//   color: $red;
-//   font-weight: 600;
-// }
-// .signin .content .form .inputBox input[type="submit"] {
-//   padding: 10px;
-//   background: $yellow;
-//   color: #000;
-//   font-weight: 600;
-//   font-size: 1.35em;
-//   letter-spacing: 0.05em;
-//   cursor: pointer;
-// }
-// input[type="submit"]:active {
-//   opacity: 0.6;
-// }
+.create-account-redirect-link .answer:hover {
+  opacity: 0.8;
+}
+.create-account-redirect-link .answer:active {
+  opacity: 0.6;
+}
+
+//Login Button
+.login-button, .signup-button {
+  width: 100%;
+  border-style: none; 
+  border-radius: 4px;
+  background: $green;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.login-button:hover, .signup-button:hover {
+  opacity: 0.8;
+}
+.login-button:active, .signup-button:active {
+  opacity: 0.6;
+}
+
+//Set the span width and heights based on media size. 
 @media (max-width: 900px) {
   .login-mainContainer span 
   {

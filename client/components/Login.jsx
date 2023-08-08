@@ -54,22 +54,22 @@ const Login = () => {
     <div className='login-mainContainer'>
 
       <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
-    
+
       <div className = 'login-leftContainer'>
-        <img className='logoImage' src={kubereadylogo} alt="Are you ready?" />
-        <p id="instructions-title">Before logging in: </p>
-        <ol>
-          <li id="instructions-step">Please install Helm</li>
-          <li id="instructions-step">Free up Port 3000</li>
-        </ol>
-        <button id='redirect-button' >
-          <a href='https://www.kubeready.com'>Learn More</a>
-        </button>
+        <div className='content'>
+          <img className='logoImage' src={kubereadylogo} alt="Are you ready?" />
+          <p id="instructions-title">Before logging in: </p>
+          <ol>
+            <li id="instructions-step">Please install Helm</li>
+            <li id="instructions-step">Free up Port 3000</li>
+          </ol>
+          <button id='redirect-button' >
+            <a href='https://www.kubeready.com'>Learn More</a>
+          </button>
+        </div>
       </div>
     
-      {/* class=signin */}
       <div className = 'login-rightContainer'>
-        {/* class="content" */}
         <div className='content'>
           <h1>Get Started</h1>
           <div class='form'>
@@ -96,13 +96,11 @@ const Login = () => {
               </div>
               <div class='create-account-redirect-link'>
                 <p class='question'>Don't have an account?</p>
-                <a class='answer'>Create an Account</a>
+                <Link class='answer' to='/signup'>Create an Account</Link>
               </div>
-              <div class="inputBox">
-                <button type='submit' className='login-button' disabled={isLoading}>
-                  Login
-                </button>
-              </div>
+              <button type='submit' className='login-button' disabled={isLoading}>
+                Login
+              </button>
             </form>
           </div>
         </div>

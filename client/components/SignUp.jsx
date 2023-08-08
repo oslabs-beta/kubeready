@@ -62,49 +62,67 @@ const SignUp = () => {
 
   // signup div
   return (
-    <div className = 'signUpContainer'>
-    <div className='signUp'>
-      <h2 style={{color: 'white' }}>Don't Guess. Just Kubeready! </h2>
-      <h3 style={{ color: 'white' }}>Ready.Set.Go</h3>
-      <form onSubmit={handleSubmit}>
-        <input
-          className='signup-input'
-          name='name'
-          type='text'
-          placeholder='Name'
-          onChange={handleNameChange}
-          value={name}
-        />
-        <input
-          className='signup-input'
-          name='email'
-          type='text'
-          placeholder='Email'
-          onChange={handleEmailChange}
-          value={email}
-        />
-        <input
-          className='signup-input'
-          name='username'
-          type='text'
-          placeholder='Enter Username'
-          onChange={handleUsernameChange}
-          value={username}
-        />
-        <input
-          className='signup-input'
-          name='password'
-          type='password'
-          placeholder='Create Password'
-          onChange={handlePasswordChange}
-          value={password}
-        />
-        <button type='submit' className='signup-button' disabled={isLoading}>
-          {/* <Link to='/homepage'>Sign Up</Link> */}
-          Sign Up
-        </button>
-      </form>
-    </div>
+    <div className = 'signup-mainContainer'>
+
+      <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+
+      <div className='signup-box'>
+        <div className = 'content'>
+          <h1>Don't Guess. Just Kubeready! </h1>
+          <h2>Ready. Set. Go.</h2>
+          <div className='form'>
+            <form onSubmit={handleSubmit}>
+              <div className='inputBox'>
+                <input
+                  className='signup-input'
+                  name='name'
+                  type='text'
+                  placeholder='Name'
+                  onChange={handleNameChange}
+                  value={name}
+                />
+              </div>
+              <div className='inputBox'>
+                <input
+                  className='signup-input'
+                  name='email'
+                  type='text'
+                  placeholder='Email'
+                  onChange={handleEmailChange}
+                  value={email}
+                />
+              </div>
+              <div className='inputBox'>
+                <input
+                  className='signup-input'
+                  name='username'
+                  type='text'
+                  placeholder='Enter Username'
+                  onChange={handleUsernameChange}
+                  value={username}
+                />
+              </div>
+              <div className='inputBox'>
+                <input
+                  className='signup-input'
+                  name='password'
+                  type='password'
+                  placeholder='Create Password'
+                  onChange={handlePasswordChange}
+                  value={password}
+                />
+              </div>
+              <div class='create-account-redirect-link'>
+                <p class='question'>Have an account?</p>
+                <Link class='answer' to='/'>Log In Here</Link>
+              </div>
+              <button type='submit' className='signup-button' disabled={isLoading}>
+                Sign Up
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

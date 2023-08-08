@@ -37,7 +37,7 @@ const LogoutContainer = () => {
   };
 
   return (
-    <div id='login-and-logout-container'>
+    <div id='logout-container'>
       {/* <button id='login-button'>Login</button> */}
       <button id='logout-button' onClick={logoutClick} disabled={isLoading}>
         {/* <Link to='/'> */}
