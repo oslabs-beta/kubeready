@@ -70,41 +70,40 @@ const Login = () => {
       {/* class=signin */}
       <div className = 'login-rightContainer'>
         {/* class="content" */}
-        <div className='login'>
+        <div className='content'>
           <h1>Get Started</h1>
-          <form onSubmit={handleSubmit}>
-            <div class="inputBox">
-              <input
-                className='login-input'
-                name='username'
-                type='text'
-                placeholder='Username'
-                onChange={handleUsernameChange}
-                value={username}
-              />
-            </div>
-            <div class="inputBox">
-              <input
-                className='login-input'
-                name='password'
-                type='password'
-                placeholder='Password'
-                onChange={handlePasswordChange}
-                value={password}
-              />
-            </div>
-            <div class="inputBox">
-              <button type='submit' className='login-button' disabled={isLoading}>
-                Login
-              </button>
-            </div>
-          </form>
-          {/* <button className='createAcct-button'>
-            <Link to='/signup'>Don't have an account?</Link>
-          </button> */}
-          <div class='create-account-redirect-link'>
-            <p>Don't have an account?</p>
-            <a>Create an Account</a>
+          <div class='form'>
+            <form onSubmit={handleSubmit}>
+              <div class="inputBox">
+                <input
+                  className='login-input'
+                  name='username'
+                  type='text'
+                  placeholder='Username'
+                  onChange={handleUsernameChange}
+                  value={username}
+                />
+              </div>
+              <div class="inputBox">
+                <input
+                  className='login-input'
+                  name='password'
+                  type='password'
+                  placeholder='Password'
+                  onChange={handlePasswordChange}
+                  value={password}
+                />
+              </div>
+              <div class='create-account-redirect-link'>
+                <p class='question'>Don't have an account?</p>
+                <a class='answer'>Create an Account</a>
+              </div>
+              <div class="inputBox">
+                <button type='submit' className='login-button' disabled={isLoading}>
+                  Login
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -113,41 +112,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-
-
-// HTML FROM BOOTSTRAP BELOW
-// working on modifying this
-
-
-
-<section> 
-  {/* This is the right container */}
-<div class="signin"> 
-{/* This is the content that holds the right container */}
- <div class="content"> 
- {/* Sign-in title ("Get Started") */}
-  <h2>Sign In</h2> 
-  {/* This div holds username input, password input, and the submit button */}
-  <div class="form">
-   
-   <div class="inputBox">
-    <input type="text" required> <i>Username</i> 
-   </div> 
-   
-   <div class="inputBox"> 
-    <input type="password" required> <i>Password</i> 
-   </div> 
-   
-   <div class="links"> <a href="#">Forgot Password</a> <a href="#">Signup</a> </div> 
-
-   <div class="inputBox"> 
-    <input type="submit" value="Login"> 
-   </div> 
-
-  </div> 
- </div> 
-</div> 
-</section>

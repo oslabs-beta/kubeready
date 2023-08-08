@@ -10,7 +10,7 @@ const Dashboard = () => {
 
   const navigate = useNavigate();
 
-  if (!data) useEffect(() => navigate('/'), []);
+  if (!data) useEffect(() => navigate('/homepage'), []);
   else {
     const [url] = Object.entries(data)[0];
     return (
