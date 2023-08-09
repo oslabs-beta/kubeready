@@ -1,17 +1,19 @@
-//import necessary packages
 import React from 'react';
-//import the stylesheet
 import './styles/styles.scss';
-//import apps child
 // import ClusterContainer from './containers/ClusterContainer.jsx';
 import DashboardContainer from './containers/DashboardContainer.jsx';
+import LogoutContainer from './containers/LogoutContainer.jsx';
 
 const App = () => {
   return (
     <div>
-      <DashboardContainer/>
-      <h1>coming from app.jsx</h1>
-      hi frm app.jsx testing
+      <div id='header'>
+        <h1 id='title'>kubeready</h1>
+        <LogoutContainer />
+      </div>
+      {/* The name is hard coded for now. */}
+      <h4 id='names-metrics-text'>Serena's Kubenetes Metrics</h4>
+      <DashboardContainer />
     </div>
   );
 };

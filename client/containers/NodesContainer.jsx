@@ -1,4 +1,4 @@
-//import all components from node metrics into this contaner.
+// Importing all components pertaining to node metrics
 import NodeNum from '../components/NodeNum.jsx';
 import NodesNotReady from '../components/NodesNotReady.jsx';
 import NodesReady from '../components/NodesReady.jsx';

@@ -1,0 +1,53 @@
+<!-- FROM GRAD ASSESSMENT INDEX.HTML -->
+<!-- <html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <form id="login" action="/login" method="POST">
+    <input id="user" name="user" placeholder="Username" type="text"></input>
+    <br>
+    <input id="pass" name="pass" placeholder="Password" type="text"></input>
+    <br>
+    <button id="submit" type="submit">Sign In</button>
+  </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>kubeready</title>
+  </head>
+  <body>
+    <h2>Sign Up</h2>
+    <form id="signup" action="/signup" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <br />
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+      <br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <br />
+      <input type="submit" value="Sign Up" />
+    </form>
+
+    <hr />
+
+    <h2>Login</h2>
+
+    <form id="login" action="/login" method="post">
+      <label for="login_username">Username:</label>
+      <input type="text" id="login_username" name="username" required />
+      <br />
+      <label for="login_password">Password:</label>
+      <input type="password" id="login_password" name="password" required />
+      <br />
+      <input type="submit" value="Login" />
+    </form>
+  </body>
+</html>

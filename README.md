@@ -31,3 +31,19 @@ PROMETHEUS INSTALLATION
 
 
 - Lists everything deployed within Minikube: `kubectl get all`
+
+
+
+CODE CLEANUP 8/8/23
+- delete actions directory and actions.js?
+- delete reducers and all enclosed files?
+- App.jsx 
+  - still has Serena's name on it AFAIK
+  - cluster container??
+- delete login.html?
+- delete store.js?
+- delete authController?
+- i think i will need someone to cleanup grafana controller
+- delete models and samplemodel.js?
+
+
