@@ -4,7 +4,7 @@ const Header = () => {
 
     return (
         <div className='header'>
-          
+          <header text='kubeready' />
         </div>
     )
 }

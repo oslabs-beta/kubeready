@@ -48,10 +48,12 @@ const SignUp = () => {
         return response.json();
       })
       // IF SUCCESSFUL send to dashboard page
-      .then((createdUser) => {
+      .then((user) => {
         console.log('User has been created.');
         setIsLoading(false);
+        console.log('right before user is navigated to /homepage');
         navigate('/homepage');
+        console.log('user has been navigated to /homepage');
       })
       //handle error here
       .catch((error) => {
@@ -68,8 +70,8 @@ const SignUp = () => {
 
       <div className='signup-box'>
         <div className = 'content'>
-          <h1>Don't Guess. Just Kubeready! </h1>
-          <h2>Ready. Set. Go.</h2>
+          <h1>Don't Guess. Be kubeready. </h1>
+          <h2>Manage & monitor your K8 cluster metrics with ease.</h2>
           <div className='form'>
             <form onSubmit={handleSubmit}>
               <div className='inputBox'>
