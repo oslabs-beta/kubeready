@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-//import { useHistory } from 'react-router-dom';
 
 const SignUp = () => {
   // state values and setters
@@ -47,22 +46,16 @@ const SignUp = () => {
         }
         return response.json();
       })
-      // IF SUCCESSFUL send to dashboard page
+      // If successful, send user to dashboard page
       .then((user) => {
-        console.log('User has been created.');
         setIsLoading(false);
-        console.log('right before user is navigated to /homepage');
         navigate('/homepage');
-        console.log('user has been navigated to /homepage');
       })
-      //handle error here
       .catch((error) => {
         setIsLoading(false);
-        console.log('User was not created - catch error');
       });
   };
 
-  // signup div
   return (
     <div className='signUp'>
       <h3 style={{ color: 'white' }}>Create your kubeready account</h3>
@@ -104,7 +97,6 @@ const SignUp = () => {
         />
         <br />
         <button type='submit' className='signup-button' disabled={isLoading}>
-          {/* <Link to='/homepage'>Sign Up</Link> */}
           Sign Up
         </button>
       </form>

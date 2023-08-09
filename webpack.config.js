@@ -51,12 +51,13 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, './build'),
     },
+    historyApiFallback: true,
     port: 8080,
     open: true,
     hot: true,
     compress: true,
     proxy: {
-      '/': 'http://localhost:3001',
+      '/api': 'http://localhost:3001',
     },
   },
 };

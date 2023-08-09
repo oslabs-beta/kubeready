@@ -1,7 +1,7 @@
-//require in mongoose
+// Require in mongoose
 const mongoose = require('mongoose');
 
-//create schema
+// Create schema
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -23,8 +23,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-//create model
+// Create model
 const User = mongoose.model('User', userSchema);
 
-//export mofe
 module.exports = User;

@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  // state values and setters
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  // form handleChanges - grabs data from username/password forms and adds them to state
+  //Form handleChanges - grabs data from username/password forms and adds them to state
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
@@ -17,7 +16,7 @@ const Login = () => {
     setPassword(event.target.value);
   };
 
-  // on login click
+  //On login click
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch('api/login', {
@@ -36,21 +35,18 @@ const Login = () => {
         }
         return response.json();
       })
-      //IF SUCCESSFUL, redirect to dashboard
+      //If successful, redirect to dashboard
       .then((loggedInUser) => {
-        console.log('User has logged in');
         setIsLoading(false);
         navigate('/homepage');
       })
       .catch((error) => {
         setIsLoading(false);
-        console.log('User couldnt log in');
       });
   };
 
   return (
     <div className='login'>
-      {/* <button onSubmit={handleSubmit}>Show Alert</button> */}
       <h3 style={{ color: 'white' }}>Login to your kubeready account</h3>
       <form onSubmit={handleSubmit}>
         <input
