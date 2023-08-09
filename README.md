@@ -34,14 +34,14 @@ PROMETHEUS INSTALLATION
 
 
 
-CODE CLEANUP 8/8/23
+CODE CLEANUP 8/8/23 (ALVIN)
 - delete actions directory and actions.js?
 - delete reducers and all enclosed files?
 - App.jsx 
   - still has Serena's name on it AFAIK
   - cluster container??
 - delete login.html?
-- delete store.js?
+- delete store.js? - keep? are we using some redux?
 - delete authController?
 - i think i will need someone to cleanup grafana controller
 - delete models and samplemodel.js?
