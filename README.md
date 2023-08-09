@@ -88,7 +88,7 @@ reference url in the readme
 **[Diane Moon](link to gh, li)** - Software Engineer
 <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/serena.jpeg?raw=true" alt="M3" width="100" height="100">
 **[Serena Romano](link to gh, li)** - Software Engineer
-<img src="path to file for each team member" alt="M4" width="100" height="100">
+<img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alvin.jpg?raw=true" alt="M4" width="100" height="100">
 **[Alvin Cheung](link to gh, li)** - Software Engineer
 <img src="path to file for each team member" alt="M5" width="100" height="100">
 **[Noel Pallivathucal](link to gh, li)** - Software Engineer
