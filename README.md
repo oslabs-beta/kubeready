@@ -75,10 +75,8 @@ Addition of a notification/alert system when metrics dip to critical | 🙏🏻
 Read our Article Here!
 
 # Meet the Team:
-| <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alana_photo.jpg?raw=true" alt="Alana Herlands" width="200" height="200"><br>[Alana Herlands](link-to-li-and-gh)<br>Software Engineer | <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/diane.jpeg?raw=true" alt="Diane Moon" width="200" height="200"><br>[Diane Moon](link-to-gh-and-li)<br>Software Engineer |
+| <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alana_photo.jpg?raw=true" alt="Alana Herlands" width="200" height="200"><br>Alana Herlands<br>[GitHub](https://github.com/alanaherlands 'GitHub Profile')<br>[LinkedIn](https://www.linkedin.com/in/alanaherlands/)<br>Software Engineer | <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/diane.jpeg?raw=true" alt="Diane Moon" width="200" height="200"><br>Diane Moon<br>[GitHub](https://github.com/dianemoon 'GitHub Profile')<br>[LinkedIn](https://www.linkedin.com/in/dianejmoon/)<br>Software Engineer |
 |---|---|
-| <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/serena.jpeg?raw=true" alt="Serena Romano" width="200" height="200"><br>[Serena Romano](link-to-gh-and-li)<br>Software Engineer | <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alvin.jpg?raw=true" alt="Alvin Cheung" width="200" height="200"><br>[Alvin Cheung](link-to-gh-and-li)<br>Software Engineer |
-
-| <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/noel%20palli.jpeg?raw=true" alt="Noel Pallivathucal" width="200" height="200"><br>[Noel Pallivathucal](link-to-gh-and-li)<br>Software Engineer | |
-|---|---|
+| <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/serena.jpeg?raw=true" alt="Serena Romano" width="200" height="200"><br>Serena Romano<br>[GitHub](github.com/serenahromano)<br>[LinkedIn](linkedin.com/in/srom1)<br>Software Engineer | <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alvin.jpg?raw=true" alt="Alvin Cheung" width="200" height="200"><br>Alvin Cheung<br>[GitHub](https://github.com/alvin-cheung 'GitHub Profile')<br>[LinkedIn](https://www.linkedin.com/in/alvin-cy-cheung/)<br>Software Engineer |
+| <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/noel%20palli.jpeg?raw=true" alt="Noel Pallivathucal" width="200" height="200"><br>Noel Pallivathucal<br>[GitHub](https://github.com/njpallivathucal)<br>[LinkedIn](https://github.com/njpallivathucal)<br>Software Engineer |
 
