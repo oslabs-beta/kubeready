@@ -77,20 +77,10 @@ Addition of a notification/alert system when metrics dip to critical | 🙏🏻
 Read our Article Here!
 
 # Meet the Team:
-upload image to repository 
-commit changes
-get image url right click on image
-reference url in the readme 
+| <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alana_photo.jpg?raw=true" alt="Alana Herlands" width="200" height="200"><br>[Alana Herlands](link-to-li-and-gh)<br>Software Engineer | <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/diane.jpeg?raw=true" alt="Diane Moon" width="200" height="200"><br>[Diane Moon](link-to-gh-and-li)<br>Software Engineer |
+|---|---|
+| <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/serena.jpeg?raw=true" alt="Serena Romano" width="200" height="200"><br>[Serena Romano](link-to-gh-and-li)<br>Software Engineer | <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alvin.jpg?raw=true" alt="Alvin Cheung" width="200" height="200"><br>[Alvin Cheung](link-to-gh-and-li)<br>Software Engineer |
 
-<img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alana_photo.jpg?raw=true)" alt="M1" width="100" height="100">
-**[Alana Herlands](link to li and gh)** - Software Engineer
-<img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/diane.jpeg?raw=true" alt="M2" width="100" height="100">
-**[Diane Moon](link to gh, li)** - Software Engineer
-<img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/serena.jpeg?raw=true" alt="M3" width="100" height="100">
-**[Serena Romano](link to gh, li)** - Software Engineer
-<img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alvin.jpg?raw=true" alt="M4" width="100" height="100">
-**[Alvin Cheung](link to gh, li)** - Software Engineer
-<img src="path to file for each team member" alt="M5" width="100" height="100">
-**[Noel Pallivathucal](link to gh, li)** - Software Engineer
-
+| <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/noel%20palli.jpeg?raw=true" alt="Noel Pallivathucal" width="200" height="200"><br>[Noel Pallivathucal](link-to-gh-and-li)<br>Software Engineer | |
+|---|---|
 
