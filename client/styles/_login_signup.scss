@@ -39,11 +39,11 @@ body {
 @keyframes animate {
   0%
   {
-    // transform: translateY(-100%);
+    transform: translateY(-100%);
   }
   100%
   {
-    // transform: translateY(100%);
+    transform: translateY(100%);
   }
 }
 
@@ -141,7 +141,7 @@ body {
 .signin .content .form .inputBox input:valid ~ i {
   transform: translateY(-7.5px);
   font-size: 0.8em;
-  color: #fff;
+  color: $green;
 }
 
 //Create Account Redirecting Line

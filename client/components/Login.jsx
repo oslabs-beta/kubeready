@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import kubereadylogo from '../assets/kubereadylogo.jpg';
-import Header from '../components/Header.jsx'
+import kubereadylogo_transparent from '../assets/kubereadylogo_transparent.jpg';
+// import Header from '../components/Header.jsx'
 
 
 const Login = () => {
@@ -53,13 +53,13 @@ const Login = () => {
 
   return (
     <div>
-      <Header/>
+      {/* <Header/> */}
       
       <div className='login-mainContainer'>
 
         <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
 
-        <div className = 'login-leftContainer'>
+        {/* <div className = 'login-leftContainer'>
           <div className='content'>
             <img className='logoImage' src={kubereadylogo} alt="Are you ready?" />
             <p id="instructions-title">Before logging in: </p>
@@ -71,11 +71,12 @@ const Login = () => {
               <a href='https://www.kubeready.com'>Learn More</a>
             </button>
           </div>
-        </div>
+        </div> */}
       
         <div className = 'login-rightContainer'>
           <div className='content'>
-            <h1>Get Started</h1>
+           <img className='logoImage' src={kubereadylogo_transparent} alt="transparent_logo" style={{ width: '200px', height: 'auto' }}/>
+            <h1>Get started</h1>
             <div class='form'>
               <form onSubmit={handleSubmit}>
                 <div class="inputBox">
@@ -83,7 +84,7 @@ const Login = () => {
                     className='login-input'
                     name='username'
                     type='text'
-                    placeholder='Username'
+                    placeholder='username'
                     onChange={handleUsernameChange}
                     value={username}
                   />
@@ -93,14 +94,14 @@ const Login = () => {
                     className='login-input'
                     name='password'
                     type='password'
-                    placeholder='Password'
+                    placeholder='password'
                     onChange={handlePasswordChange}
                     value={password}
                   />
                 </div>
                 <div class='create-account-redirect-link'>
-                  <p class='question'>Don't have an account?</p>
-                  <Link class='answer' to='/signup'>Create an Account</Link>
+                  {/* <p class='question'>Don't have an account?</p> */}
+                  <Link class='answer' to='/signup'>Create an account</Link>
                 </div>
                 <button type='submit' className='login-button' disabled={isLoading}>
                   Login
@@ -110,7 +111,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

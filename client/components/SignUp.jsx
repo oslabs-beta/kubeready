@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import kubereadylogo_transparent from '../assets/kubereadylogo_transparent.jpg';
 //import { useHistory } from 'react-router-dom';
 
 const SignUp = () => {
@@ -70,8 +71,8 @@ const SignUp = () => {
 
       <div className='signup-box'>
         <div className = 'content'>
-          <h1>Don't Guess. Be kubeready. </h1>
-          <h2>Manage & monitor your K8 cluster metrics with ease.</h2>
+          <img className='logoImage' src={kubereadylogo_transparent} alt="transparent_logo" style={{ width: '200px', height: 'auto' }}/>
+          <h2>Manage & monitor your K8 cluster metrics with ease</h2>
           <div className='form'>
             <form onSubmit={handleSubmit}>
               <div className='inputBox'>
@@ -79,7 +80,7 @@ const SignUp = () => {
                   className='signup-input'
                   name='name'
                   type='text'
-                  placeholder='Name'
+                  placeholder='name'
                   onChange={handleNameChange}
                   value={name}
                 />
@@ -89,7 +90,7 @@ const SignUp = () => {
                   className='signup-input'
                   name='email'
                   type='text'
-                  placeholder='Email'
+                  placeholder='email'
                   onChange={handleEmailChange}
                   value={email}
                 />
@@ -99,7 +100,7 @@ const SignUp = () => {
                   className='signup-input'
                   name='username'
                   type='text'
-                  placeholder='Enter Username'
+                  placeholder='username'
                   onChange={handleUsernameChange}
                   value={username}
                 />
@@ -109,17 +110,17 @@ const SignUp = () => {
                   className='signup-input'
                   name='password'
                   type='password'
-                  placeholder='Create Password'
+                  placeholder='password'
                   onChange={handlePasswordChange}
                   value={password}
                 />
               </div>
               <div class='create-account-redirect-link'>
-                <p class='question'>Have an account?</p>
-                <Link class='answer' to='/'>Log In Here</Link>
+                {/* <p class='question'>Have an account?</p> */}
+                <Link class='answer' to='/'>Already have an account?</Link>
               </div>
               <button type='submit' className='signup-button' disabled={isLoading}>
-                Sign Up
+                Sign up
               </button>
             </form>
           </div>
