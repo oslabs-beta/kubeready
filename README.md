@@ -32,7 +32,9 @@ Kuberready is an advanced tool designed to streamline and enhance your experienc
 
 # Getting Started 
 *Install [Docker](https://www.docker.com/products/docker-desktop/) on your OS so a container can be spun up.<br>*Begin running a minikube to visualize a local kubernetes cluster.<br>*To begin a minikube inside a docker container, run command ```minikube start```
-![Alt Text](https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/kubeready%20login%20gif.gif?raw=true)
+![LoginToDashboardGif](https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/kubeready%20login%20gif.gif?raw=true)
+![SignUpGif](https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/kubeready%20signup.gif?raw=true)
+
 # Commands we need to run, here can add gifs and screenshots
 upload image to repository 
 commit changes
