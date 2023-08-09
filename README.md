@@ -30,24 +30,20 @@ Kuberready is an advanced tool designed to streamline and enhance your experienc
 
 
 
-# Getting Started 
+# Installation/Getting Started: 
+..need to add what commands to run gifs already in 
 *Install [Docker](https://www.docker.com/products/docker-desktop/) on your OS so a container can be spun up.<br>*Begin running a minikube to visualize a local kubernetes cluster.<br>*To begin a minikube inside a docker container, run command ```minikube start```
 ![LoginToDashboardGif](https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/kubeready%20login%20gif.gif?raw=true)
 ![SignUpGif](https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/kubeready%20signup.gif?raw=true)
 
-# Commands we need to run, here can add gifs and screenshots
-upload image to repository 
-commit changes
-get image url right click on image
-reference url in the readme 
-![Alt text](/relative/path/to/raw=true "Optional Title")
-
 
 # Requirements:
+//need to add relevant port numbers 
 -The following ports need to be free:
 Technology  | Port Number
 ------------- | -------------
 Grafana  | 3000
+Server | 3001
 Prometheus  | 8000/8080
 
 
