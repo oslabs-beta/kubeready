@@ -12,7 +12,7 @@ const Homepage = () => {
                 <h1>My Dashboard</h1>
                 <div className='header-buttons'>
                     <button className='logout-button'>
-                      <Link to='signin'>Logout</Link>
+                      <Link to='/signin'>Logout</Link>
                     </button>
                     <button className='signup-button'>
                       <Link to='/signup'>Sign Up</Link>
