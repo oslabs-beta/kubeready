@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import kubereadylogo from '../assets/kubereadylogo.jpg';
-// import Header from '../components/Header.jsx'
+import Header from '../components/Header.jsx'
 
 
 const Login = () => {
@@ -52,60 +52,61 @@ const Login = () => {
   };
 
   return (
-    <div className='login-mainContainer'>
-      <div className='header'>
-        <h1>kubeready</h1>
-      </div>
+    <div>
+      <Header/>
+      
+      <div className='login-mainContainer'>
 
-      <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
 
-      <div className = 'login-leftContainer'>
-        <div className='content'>
-          <img className='logoImage' src={kubereadylogo} alt="Are you ready?" />
-          <p id="instructions-title">Before logging in: </p>
-          <ol>
-            <li id="instructions-step">Please install Helm</li>
-            <li id="instructions-step">Free up Port 3000</li>
-          </ol>
-          <button id='redirect-button' >
-            <a href='https://www.kubeready.com'>Learn More</a>
-          </button>
+        <div className = 'login-leftContainer'>
+          <div className='content'>
+            <img className='logoImage' src={kubereadylogo} alt="Are you ready?" />
+            <p id="instructions-title">Before logging in: </p>
+            <ol>
+              <li id="instructions-step">Please install Helm</li>
+              <li id="instructions-step">Free up Port 3000</li>
+            </ol>
+            <button id='redirect-button' >
+              <a href='https://www.kubeready.com'>Learn More</a>
+            </button>
+          </div>
         </div>
-      </div>
-    
-      <div className = 'login-rightContainer'>
-        <div className='content'>
-          <h1>Get Started</h1>
-          <div class='form'>
-            <form onSubmit={handleSubmit}>
-              <div class="inputBox">
-                <input
-                  className='login-input'
-                  name='username'
-                  type='text'
-                  placeholder='Username'
-                  onChange={handleUsernameChange}
-                  value={username}
-                />
-              </div>
-              <div class="inputBox">
-                <input
-                  className='login-input'
-                  name='password'
-                  type='password'
-                  placeholder='Password'
-                  onChange={handlePasswordChange}
-                  value={password}
-                />
-              </div>
-              <div class='create-account-redirect-link'>
-                <p class='question'>Don't have an account?</p>
-                <Link class='answer' to='/signup'>Create an Account</Link>
-              </div>
-              <button type='submit' className='login-button' disabled={isLoading}>
-                Login
-              </button>
-            </form>
+      
+        <div className = 'login-rightContainer'>
+          <div className='content'>
+            <h1>Get Started</h1>
+            <div class='form'>
+              <form onSubmit={handleSubmit}>
+                <div class="inputBox">
+                  <input
+                    className='login-input'
+                    name='username'
+                    type='text'
+                    placeholder='Username'
+                    onChange={handleUsernameChange}
+                    value={username}
+                  />
+                </div>
+                <div class="inputBox">
+                  <input
+                    className='login-input'
+                    name='password'
+                    type='password'
+                    placeholder='Password'
+                    onChange={handlePasswordChange}
+                    value={password}
+                  />
+                </div>
+                <div class='create-account-redirect-link'>
+                  <p class='question'>Don't have an account?</p>
+                  <Link class='answer' to='/signup'>Create an Account</Link>
+                </div>
+                <button type='submit' className='login-button' disabled={isLoading}>
+                  Login
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
