@@ -74,7 +74,7 @@ Addition of a notification/alert system when metrics dip to critical | 🙏🏻
 🙏🏻 = Looking for contributors<br>
 
 # Publications:
-Link to medium article
+Read our Article Here!
 
 # Meet the Team:
 upload image to repository 
@@ -82,7 +82,7 @@ commit changes
 get image url right click on image
 reference url in the readme 
 
-<img src="path to file for each team member" alt="M1" width="100" height="100">
+<img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alana_photo.jpg?raw=true)" alt="M1" width="100" height="100">
 **[Alana Herlands](link to li and gh)** - Software Engineer
 <img src="path to file for each team member" alt="M2" width="100" height="100">
 **[Diane Moon](link to gh, li)** - Software Engineer
