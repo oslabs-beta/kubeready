@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import kubereadylogo_transparent from '../assets/kubereadylogo_transparent.jpg';
 
 const SignUp = () => {
   // state values and setters
@@ -57,49 +58,127 @@ const SignUp = () => {
   };
 
   return (
-    <div className='signUp'>
-      <h3 style={{ color: 'white' }}>Create your kubeready account</h3>
-      <form onSubmit={handleSubmit}>
-        <input
-          className='signup-input'
-          name='name'
-          type='text'
-          placeholder='Name'
-          onChange={handleNameChange}
-          value={name}
-        />
-        <br />
-        <input
-          className='signup-input'
-          name='email'
-          type='text'
-          placeholder='Email'
-          onChange={handleEmailChange}
-          value={email}
-        />
-        <br />
-        <input
-          className='signup-input'
-          name='username'
-          type='text'
-          placeholder='Enter Username'
-          onChange={handleUsernameChange}
-          value={username}
-        />
-        <br />
-        <input
-          className='signup-input'
-          name='password'
-          type='password'
-          placeholder='Create Password'
-          onChange={handlePasswordChange}
-          value={password}
-        />
-        <br />
-        <button type='submit' className='signup-button' disabled={isLoading}>
-          Sign Up
-        </button>
-      </form>
+    <div className='signup-mainContainer'>
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+      <span></span> <span></span> <span></span> <span></span> <span></span>
+      <div className='signup-box'>
+        <div className='content'>
+          <img
+            className='logoImage'
+            src={kubereadylogo_transparent}
+            alt='transparent_logo'
+            style={{ width: '200px', height: 'auto' }}
+          />
+          <h2>Manage & monitor your K8 cluster metrics with ease</h2>
+          <div className='form'>
+            <form onSubmit={handleSubmit}>
+              <div className='inputBox'>
+                <input
+                  className='signup-input'
+                  name='name'
+                  type='text'
+                  placeholder='name'
+                  onChange={handleNameChange}
+                  value={name}
+                />
+              </div>
+              <div className='inputBox'>
+                <input
+                  className='signup-input'
+                  name='email'
+                  type='text'
+                  placeholder='email'
+                  onChange={handleEmailChange}
+                  value={email}
+                />
+              </div>
+              <div className='inputBox'>
+                <input
+                  className='signup-input'
+                  name='username'
+                  type='text'
+                  placeholder='username'
+                  onChange={handleUsernameChange}
+                  value={username}
+                />
+              </div>
+              <div className='inputBox'>
+                <input
+                  className='signup-input'
+                  name='password'
+                  type='password'
+                  placeholder='password'
+                  onChange={handlePasswordChange}
+                  value={password}
+                />
+              </div>
+              <div className='create-account-redirect-link'>
+                {/* <p class='question'>Have an account?</p> */}
+                <Link class='answer' to='/'>
+                  Already have an account?
+                </Link>
+              </div>
+              <button
+                type='submit'
+                className='signup-button'
+                disabled={isLoading}
+              >
+                Sign up
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

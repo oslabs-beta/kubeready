@@ -6,7 +6,8 @@ const SessionController = require('../controllers/sessionController.js');
 // const grafanaController = require('../controllers/grafanaController.js');
 // const installController = require('../controllers/installController.js');
 
-//route handler for a post request to the /signup endpoint- CREATING A USER
+//route handler for a post request to the /signup endpoint
+//CREATING A USER
 router.post(
   '/signup',
   UserController.createUser,

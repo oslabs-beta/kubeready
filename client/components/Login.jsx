@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import kubereadylogo from '../assets/kubereadylogo.jpg';
+import kubereadylogo_transparent from '../assets/kubereadylogo_transparent.jpg';
+// import Header from '../components/Header.jsx'
 
 const Login = () => {
+  // state values and setters
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  //Form handleChanges - grabs data from username/password forms and adds them to state
+  // form handleChanges - grabs data from username/password forms and adds them to state
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
@@ -17,7 +19,7 @@ const Login = () => {
     setPassword(event.target.value);
   };
 
-  //On login click
+  // on login click
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch('api/login', {
@@ -36,46 +38,136 @@ const Login = () => {
         }
         return response.json();
       })
-      //If successful, redirect to dashboard
+      //IF SUCCESSFUL, redirect to dashboard
       .then((loggedInUser) => {
+        console.log('User has logged in');
         setIsLoading(false);
         navigate('/homepage');
       })
       .catch((error) => {
         setIsLoading(false);
+        console.log('User couldnt log in');
       });
   };
 
   return (
-    <div className='login'>
-      <h3 style={{ color: 'white' }}>Login to your kubeready account</h3>
-      <form onSubmit={handleSubmit}>
-        <input
-          className='login-input'
-          name='username'
-          type='text'
-          placeholder='Username'
-          onChange={handleUsernameChange}
-          value={username}
-        />
-        <br />
-        <input
-          className='login-input'
-          name='password'
-          type='password'
-          placeholder='Password'
-          onChange={handlePasswordChange}
-          value={password}
-        />
-        <br />
-        <button type='submit' className='login-button' disabled={isLoading}>
-          Login
-        </button>
-      </form>
-      <br />
-      <button className='createAcct-button'>
-        <Link to='/signup'>Create an Account</Link>
-      </button>
+    <div>
+      {/* <Header/> */}
+      <div className='login-mainContainer'>
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>{' '}
+        <span></span> <span></span> <span></span> <span></span> <span></span>
+        {/* <div className = 'login-leftContainer'>
+          <div className='content'>
+            <img className='logoImage' src={kubereadylogo} alt="Are you ready?" />
+            <p id="instructions-title">Before logging in: </p>
+            <ol>
+              <li id="instructions-step">Please install Helm</li>
+              <li id="instructions-step">Free up Port 3000</li>
+            </ol>
+            <button id='redirect-button' >
+              <a href='https://www.kubeready.com'>Learn More</a>
+            </button>
+          </div>
+        </div> */}
+        <div className='login-rightContainer'>
+          <div className='content'>
+            <img
+              className='logoImage'
+              src={kubereadylogo_transparent}
+              alt='transparent_logo'
+              style={{ width: '200px', height: 'auto' }}
+            />
+            <h1>Get started</h1>
+            <div className='form'>
+              <form onSubmit={handleSubmit}>
+                <div className='inputBox'>
+                  <input
+                    className='login-input'
+                    name='username'
+                    type='text'
+                    placeholder='username'
+                    onChange={handleUsernameChange}
+                    value={username}
+                  />
+                </div>
+                <div className='inputBox'>
+                  <input
+                    className='login-input'
+                    name='password'
+                    type='password'
+                    placeholder='password'
+                    onChange={handlePasswordChange}
+                    value={password}
+                  />
+                </div>
+                <div className='create-account-redirect-link'>
+                  <Link className='answer' to='/signup'>
+                    Create an accountnp
+                  </Link>
+                </div>
+                <button
+                  type='submit'
+                  className='login-button'
+                  disabled={isLoading}
+                >
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      //{' '}
     </div>
   );
 };

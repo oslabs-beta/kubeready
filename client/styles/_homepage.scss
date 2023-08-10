@@ -21,41 +21,38 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333;
+  background-color: #111;
   color: white;
 }
 
 .header-buttons {
   display: flex;
-  gap: 10px;
-
-  .logout-button,
-  .signup-button {
-    padding: 5px 10px;
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+  gap: 15px;
 }
 
-// #dashboard-typography {
-//   text-transform: uppercase;
-//   background-image: linear-gradient(
-//     -225deg,
-//     $red 0%,
-//     $yellow 29%,
-//     $green 67%,
-//   );
-//   background-size: auto auto;
-//   background-clip: border-box;
-//   background-size: 200% auto;
-//   color: black;
-//   background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   animation: textclip 2s linear infinite;
-//   display: inline-block;
-//   font-size: 75px;
-// }
+.logout-link,
+.signup-link {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.logout-link {
+  background-color: gray;
+  color: white;
+  box-shadow: 0 0 7px rgba(40, 40, 40, 0.2);
+}
+.signup-link {
+  background-color: $green;
+  color: #282828;
+  box-shadow: 0 0 7px rgba(40, 42, 40, 0.2);
+}
+.logout-link:hover,
+.signup-link:hover {
+  opacity: 0.8;
+}
+.logout-link:active,
+.signup-link:active {
+  opacity: 0.6;
+}

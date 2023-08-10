@@ -1,9 +1,18 @@
+// NOT USING THIS CURRENTLY
+
 import React from 'react';
+import kubereadylogo_transparent from '../assets/kubereadylogo_transparent.jpg';
 
 const Header = () => {
   return (
     <div className='header'>
-      <img href='' />
+      <div className='content'>
+        <img
+          src={kubereadylogo_transparent}
+          alt='Header Image'
+          style={{ width: '200px', height: 'auto' }}
+        />
+      </div>
     </div>
   );
 };

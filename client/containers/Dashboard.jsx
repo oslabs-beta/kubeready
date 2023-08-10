@@ -14,11 +14,11 @@ const Dashboard = () => {
     // const [url] = Object.entries(data)[0];
     const url = '';
     return (
-      <div id='dashboard-container'>
+      <div className='dashboard-container'>
         <iframe
-          id='dashboard-iframe'
+          className='dashboard-iframe'
           title='My Dashboard'
-          src='http://localhost:3000/d/fe3fe54b-0830-42bc-8012-0219b44f4234/kubeready?orgId=1'
+          src={url}
         ></iframe>
       </div>
     );
