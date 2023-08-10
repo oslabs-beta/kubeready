@@ -24,11 +24,15 @@
 For those experienced with the Kubernetes environment, the intricacies of monitoring cluster health are well understood. Navigating the complexities inherent in visualizing a cluster is a challenge that necessitates attention to a multitude of factors. The challenge lies in discerning which metrics hold critical significance and which ones might be relegated to a less prominent role. Get ready to be ready with kubeready! With our tool, visualizing kubernetes metrics from any local cluster becomes simple. Crafted with a developer-centric approach, kubeready boasts a user-friendly platform, delivering real-time metric visualization. By offering an instantaneous display of these metrics, kubeready empowers developers to promptly address performance issues as they emerge, significantly elevating their responsiveness and efficacy in tackling such challenges.
 
 # Features
-kubeready is an advanced tool designed to streamline and enhance your experience with Kubernetes cluster management, monitoring, and analysis. It offers seamless integrations with Grafana and Prometheus, robust password encryption, a comprehensive testing suite, and the ability to create and render custom dashboards. Let's delve into each of these features:
-* Effortlessly connect your Kubernetes clusters to Grafana, allowing you to visualize and analyze various performance metrics, resource utilization.
-* By integrating kubeready with Prometheus, you can easily collect, store, and query metrics from your Kubernetes clusters.
-* Security is a top priority in any Kubernetes environment. kubeready prioritizes security by providing robust password encryption mechanisms.
-* kubeready goes beyond monitoring by including a comprehensive testing suite. This suite enables you to simulate various scenarios and assess how interaction between different pages of the application are ocurring.
+## User-facing features
+The kubeready tool is designed to streamline and enhance your experience with Kubernetes cluster management, monitoring, and analysis. kubeready was built with comprehensive pre-built metrics, automated dependency installation, seamless Grafana and Prometheus integration, custom dashboard generation, password encryption, and a comprehensive developer-side testing suite. 
+* Connect your Kubernetes clusters to pre-built metrics, allowing you to visualize detailed CPU, Memory, Network, and Disk metrics.
+* Automated dependency installation, running commands upon account creation to connect Helm charts and custom Grafana configurations.
+* Automated Grafana dashboard creation, rendering a new dashboard specific to the user's machine.
+* Automated connection to Prometheus, scraping metrics more quickly without additional user setup. 
+* Security is a top priority in any Kubernetes environment. kubeready provides password encryption through bcrypt. 
+## Developer-facing features
+* Test-driven development: kubeready's comprehensive testing suite enables future developers to assess code functionality throughout the application.
 
 # Requirements
 The following ports need to be free:
