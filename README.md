@@ -1,4 +1,3 @@
-
 ![kubeready](https://github.com/oslabs-beta/kubeready/assets/133065870/945e8dc5-6d2c-42e5-b93f-64271ff79548)
 
 # Technology Stack 
@@ -15,20 +14,23 @@
 ![Static Badge](https://img.shields.io/badge/Grafana-black?style=for-the-badge&logo=grafana&logoColor=orange)
 ![Static Badge](https://img.shields.io/badge/Helm-blue?style=for-the-badge&logo=helm&logoColor=white)
 
-
-
 # Introduction
-
-For those experienced with the Kubernetes environment, the intricacies of monitoring cluster health are well understood. Navigating the complexities inherent in visualizing a cluster is a challenge that necessitates attention to a multitude of factors. The challenge lies in discerning which metrics hold critical significance and which ones might be relegated to a less prominent role. Get ready to be ready with kubeready! With our tool, visualizing kubernetes metrics from any local cluster becomes simple. Crafted with a developer-centric approach, it boasts user-friendliness at its core. Through our platform, we deliver the invaluable feature of real-time metric visualization. By offering an instantaneous display of these metrics, we empower developers to promptly address any performance issues that may emerge, thereby significantly elevating their responsiveness and efficacy in tackling such challenges.
+For those experienced with the Kubernetes environment, the intricacies of monitoring cluster health are well understood. Navigating the complexities inherent in visualizing a cluster is a challenge that necessitates attention to a multitude of factors. The challenge lies in discerning which metrics hold critical significance and which ones might be relegated to a less prominent role. Get ready to be ready with kubeready! With our tool, visualizing kubernetes metrics from any local cluster becomes simple. Crafted with a developer-centric approach, kubeready boasts a user-friendly platform, delivering real-time metric visualization. By offering an instantaneous display of these metrics, kubeready empowers developers to promptly address performance issues as they emerge, significantly elevating their responsiveness and efficacy in tackling such challenges.
 
 # Features
 Kuberready is an advanced tool designed to streamline and enhance your experience with Kubernetes cluster management, monitoring, and analysis. It offers seamless integrations with Grafana and Prometheus, robust password encryption, a comprehensive testing suite, and the ability to create and render custom dashboards. Let's delve into each of these features:
- <br>⦿ Effortlessly connect your Kubernetes clusters to Grafana, allowing you to visualize and analyze various performance metrics, resource utilization.
- <br>⦿ By integrating Kuberready with Prometheus, you can easily collect, store, and query metrics from your Kubernetes clusters.
- <br>⦿ Security is a top priority in any Kubernetes environment. Kuberready prioritizes security by providing robust password encryption mechanisms. 
- <br>⦿ Kuberready goes beyond monitoring by including a comprehensive testing suite. This suite enables you to simulate various scenarios and assess how interaction between different pages of the application are ocurring.
+* Effortlessly connect your Kubernetes clusters to Grafana, allowing you to visualize and analyze various performance metrics, resource utilization.
+* By integrating Kuberready with Prometheus, you can easily collect, store, and query metrics from your Kubernetes clusters.
+* Security is a top priority in any Kubernetes environment. Kuberready prioritizes security by providing robust password encryption mechanisms.
+* Kuberready goes beyond monitoring by including a comprehensive testing suite. This suite enables you to simulate various scenarios and assess how interaction between different pages of the application are ocurring.
 
-
+# Requirements
+The following ports need to be free:
+Technology  | Port Number
+------------- | -------------
+Grafana  | 3000
+server | 3001
+kubeready  | 8080
 
 # Installation/Getting Started
 ## To start a new Kubernetes cluster
@@ -58,17 +60,6 @@ https://localhost:3001/
 5. Create an account or sign in.
 ![LoginToDashboardGif](https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/kubeready%20login%20gif.gif?raw=true)
 ![SignUpGif](https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/kubeready%20signup.gif?raw=true)
-
-
-# Requirements
-The following ports need to be free:
-Technology  | Port Number
-------------- | -------------
-Grafana  | 3000
-Server | 3001
-kubeready  | 8080
-
-
 
 # RoadMap Regarding Present/Future Considerations
 Feature  | Status
