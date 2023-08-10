@@ -9,11 +9,12 @@
 ![Static Badge](https://img.shields.io/badge/Docker-blue)
 ![Static Badge](https://img.shields.io/badge/Express-gray)
 ![Static Badge](https://img.shields.io/badge/kubernetes-white)
-![Static Badge](https://img.shields.io/badge/Jest-purple)
-![Static Badge](https://img.shields.io/badge/SASS-gold)
-![Static Badge](https://img.shields.io/badge/Prometheus-green)
-![Static Badge](https://img.shields.io/badge/Grafana-orange)
-![Static Badge](https://img.shields.io/badge/Helm-pink)
+![Static Badge](https://img.shields.io/badge/Jest-purple?style=for-the-badge&logo=jest)
+![Static Badge](https://img.shields.io/badge/SASS-gold?style=for-the-badge&logo=sass)
+![Static Badge](https://img.shields.io/badge/Prometheus-orange?style=for-the-badge&logo=prometheus&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Grafana-black?style=for-the-badge&logo=grafana&logoColor=orange)
+![Static Badge](https://img.shields.io/badge/Helm-blue?style=for-the-badge&logo=helm&logoColor=white)
+
 
 
 # Introduction
