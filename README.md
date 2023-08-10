@@ -18,6 +18,7 @@
   <img src='https://img.shields.io/badge/Grafana-black?style=for-the-badge&logo=grafana&logoColor=orange'/>
   <img src='https://img.shields.io/badge/Helm-blue?style=for-the-badge&logo=helm&logoColor=white'/>
   <img src="https://img.shields.io/badge/MongoDB-green?style=for-the-badge&logo=mongodb&logoColor=white">
+  <img src="https://img.shields.io/badge/brcypt-blue?style=for-the-badge&color=purple">
 </div>
 
 # Introduction
@@ -35,7 +36,7 @@ The kubeready tool is designed to streamline and enhance your experience with Ku
 * Test-driven development: kubeready's comprehensive testing suite (using Jest and React Testing Library) enables future developers to assess code functionality throughout the frontend and backend of the application.
 
 # Requirements
-The following ports need to be free:
+Please free up the following ports:
 Technology  | Port Number
 ------------- | -------------
 Grafana  | 3000
