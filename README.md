@@ -32,7 +32,7 @@ The kubeready tool is designed to streamline and enhance your experience with Ku
 * Automated connection to Prometheus, scraping metrics more quickly without additional user setup. 
 * Security is a top priority in any Kubernetes environment. kubeready provides password encryption through bcrypt. 
 ## Developer-facing features
-* Test-driven development: kubeready's comprehensive testing suite enables future developers to assess code functionality throughout the application.
+* Test-driven development: kubeready's comprehensive testing suite (using Jest and React Testing Library) enables future developers to assess code functionality throughout the frontend and backend of the application.
 
 # Requirements
 The following ports need to be free:
