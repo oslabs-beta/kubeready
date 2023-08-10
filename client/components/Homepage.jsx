@@ -1,6 +1,5 @@
+// Import dependencies
 import React from 'react';
-import { useState } from 'react';
-import Dashboard from '../containers/Dashboard.jsx';
 import { Link } from 'react-router-dom';
 
 const Homepage = () => {

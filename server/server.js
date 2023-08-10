@@ -5,16 +5,13 @@ const path = require('path');
 const router = require('./routes/routes.js');
 const SessionController = require('./controllers/sessionController.js');
 
-// Assigning PORT (3001)
 const PORT = 3001;
 
-// Parsing all incoming requests from JSON to JS from the client
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const mongoose = require('mongoose');
 
-//db connection
 mongoose.connect(
   'mongodb+srv://serenahromano2000:E17s30FqKCRZoW5t@cluster0.krvanjb.mongodb.net/',
   { useNewUrlParser: true, useUnifiedTopology: true }
@@ -23,10 +20,8 @@ mongoose.connection.once('open', () => {
   console.log('Connected to Database');
 });
 
-// Serving static files from the assets folder
 app.use(express.static(path.resolve(__dirname, '../build/')));
 
-// Route for serving index.html
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });

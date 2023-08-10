@@ -17,6 +17,7 @@ const SessionController = {
       });
     }
   },
+
   checkCookie: (req, res, next) => {
     const { cookieId } = req.cookies;
     Session.findOne({ cookieId })

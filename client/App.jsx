@@ -1,7 +1,5 @@
 import React from 'react';
 import './styles/styles.scss';
-// import Dashboard from './containers/Dashboard.jsx';
-// import Homepage from './components/Homepage';
 import Login from './components/Login.jsx';
 import SignUp from './components/SignUp.jsx';
 import { Routes, Route, Link } from 'react-router-dom';

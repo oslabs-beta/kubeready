@@ -1,4 +1,4 @@
-//define action types for redux
+// Define action types for redux
 export const FETCH_CPU_UT = 'FETCH_CPU_UT';
 export const FETCH_CPU_REQ = 'FETCH_CPU_REQ';
 export const FETCH_CPU_LIM = 'FETCH_CPU_LIM';

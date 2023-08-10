@@ -7,7 +7,7 @@ const SessionController = require('../controllers/sessionController.js');
 // const installController = require('../controllers/installController.js');
 
 //route handler for a post request to the /signup endpoint
-//CREATING A USER
+//CREATING A USER ROUTE HANDLER
 router.post(
   '/signup',
   UserController.createUser,

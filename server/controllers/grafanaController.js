@@ -4,7 +4,7 @@ const panels = require('../grafana/panels.json');
 
 //initialize an empty object that will house dashboard URL
 const urlStorage = {};
-//declare grafanaController object
+
 const grafanaController = {
   getApiToken: (req, res, next) => {
     console.log('entered getApiToken in Grafana Controller');

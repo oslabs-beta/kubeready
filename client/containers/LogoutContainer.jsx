@@ -5,7 +5,7 @@ const LogoutContainer = () => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Delete cookie & bring user back to login
+  // Deletes cookie & bring user back to login
   const logoutClick = (e) => {
     e.preventDefault();
     setIsLoading(true);

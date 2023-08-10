@@ -1,6 +1,6 @@
-// imports to run tests
+// Imports to run tests
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 // history package provides a way to manage session history in JS environments
 // history package is commonly incuded as a dependency when using React routing libraries like 'react-router-dom'
@@ -20,30 +20,31 @@ function renderSignUpPage() {
 describe('signUpPage', () => {
   test('renders sign-up form elements', () => {
     // before each test, render the sign up page (virtual environment)
-      beforeEach(() => {
-        renderSignUpPage();
-      });
-
-      // query virtual DOM to select elements
-      // assertions
-      expect(screen.getByLabelText('Name')).toBeInTheDocument();
-      expect(screen.getByLabelText('Username')).toBeInTheDocument();
-      expect(screen.getByLabelText('Password')).toBeInTheDocument();
-      expect(screen.getByRole('button', { name: 'Sign Up' })).toBeInTheDocument();
+    beforeEach(() => {
+      renderSignUpPage();
     });
-    
+
+    // query virtual DOM to select elements
+    // assertions
+    expect(screen.getByLabelText('Name')).toBeInTheDocument();
+    expect(screen.getByLabelText('Username')).toBeInTheDocument();
+    expect(screen.getByLabelText('Password')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Sign Up' })).toBeInTheDocument();
+  });
+
   //test: is an error message appearing if un or pw is missing?
   test('display error if all input fields not filled', () => {
-    const submitButton = screen.getByRole('button', {name: 'Sign Up'});
+    const submitButton = screen.getByRole('button', { name: 'Sign Up' });
     // simulate submit form funcitonality
     fireEvent.click(submitButton);
-    
-    // query virtual DOM to find element that has id set to error 
+
+    // query virtual DOM to find element that has id set to error
     const errorMessage = screen.getByTestId('error');
     // assertions
     expect(errorMessage).toBeInTheDocument();
-    expect(errorMessage.textContent).toBe("All input fields are required to be filled on form submission.")
-
+    expect(errorMessage.textContent).toBe(
+      'All input fields are required to be filled on form submission.'
+    );
   });
 
   test('error message is removed when form submit is successful', async () => {
@@ -69,7 +70,7 @@ describe('signUpPage', () => {
 
     // assertion: form submission is successful, so the error message should not be present
     expect(errorMessage).toBeNull();
-});
+  });
 
   test('display a success message and redirects to dashboard (homepage) after form submits successfully', async () => {
     // create a mock form submission function that resolves with a success response
@@ -95,9 +96,15 @@ describe('signUpPage', () => {
     const submitButton = screen.getByRole('button', { name: 'Sign Up' });
 
     // simulate change events on form input fields to update their values
-    fireEvent.change(nameInput, { target: { name: 'name', value: 'testname' } });
-    fireEvent.change(userInput, { target: { name: 'username', value: 'testuser' } });
-    fireEvent.change(passwordInput, { target: { name: 'password', value: 'testpassword' } });
+    fireEvent.change(nameInput, {
+      target: { name: 'name', value: 'testname' },
+    });
+    fireEvent.change(userInput, {
+      target: { name: 'username', value: 'testuser' },
+    });
+    fireEvent.change(passwordInput, {
+      target: { name: 'password', value: 'testpassword' },
+    });
 
     // simulate click event triggers form submission
     fireEvent.click(submitButton);
@@ -117,11 +124,11 @@ describe('signUpPage', () => {
     // check if the user is redirected to the dashboard (homepage) after form submission
     expect(history.location.pathname).toBe('/homepage');
   });
+});
 
-
-  // NOTES:
-  // libraries : jest, react testing library, react router DOM
-  // react router dom: will handle routing and navigation between different pages or views 
-  // use react testing library: provides virtual DOM environment to render and interact with components during testing
-  // describe: used to create test suite in our case Sign Up page unit tests live within describe block  
-  // run tests by command: npm jest fileName
+// NOTES:
+// libraries : jest, react testing library, react router DOM
+// react router dom: will handle routing and navigation between different pages or views
+// use react testing library: provides virtual DOM environment to render and interact with components during testing
+// describe: used to create test suite in our case Sign Up page unit tests live within describe block
+// run tests by command: npm jest fileName

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import kubereadylogo_transparent from '../assets/kubereadylogo_transparent.jpg';
-// import Header from '../components/Header.jsx'
 
 const Login = () => {
-  // state values and setters
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);

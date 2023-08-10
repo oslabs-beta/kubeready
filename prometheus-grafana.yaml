@@ -1,6 +1,6 @@
 apiVersion: v1
 data:
-  # All configs (except security and auth.anonymous) match the kube-prometheus-stack/charts/grafana/templates/configmap.yaml
+  # All configs (except security and auth.anonymous) match the kube-prometheus-stack/charts/grafana/templates/configmap.yaml file
   grafana.ini:
     "[analytics]\ncheck_for_updates = true\n[grafana_net]\nurl = https://grafana.net\n[log]\nmode
     = console\n[paths]\ndata = /var/lib/grafana/\nlogs = /var/log/grafana\nplugins

@@ -2,7 +2,6 @@
 const { spawn, spawnSync } = require('child_process');
 
 const installController = {
-  //Install Prometheus
   installPrometheus: (req, res, next) => {
     //Add the Prometheus repository to Helm.
     const addRepo = spawnSync(

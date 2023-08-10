@@ -3,7 +3,6 @@ const User = require('../models/userModel');
 const jwt = require('jsonwebtoken');
 
 const UserController = {
-  // middleware to CREATE A USER
   createUser: async (req, res, next) => {
     try {
       const { name, password, username, email } = req.body;
@@ -20,7 +19,7 @@ const UserController = {
 
       const newUser = new User({
         name,
-        password: hashedPassword, // Set the hashed password
+        password: hashedPassword,
         username,
         email,
       });
