@@ -3,7 +3,9 @@
 # Technology Stack 
 <div align="center">
   <img src='https://img.shields.io/badge/node-red?style=for-the-badge&logo=nodedotjs&logoColor=white&color=green'/>
+  <img src='https://img.shields.io/badge/javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white&color=yellow'/>
   <img src='https://img.shields.io/badge/react-js?style=for-the-badge&logo=react&logoColor=white&color=black'/>
+  <img src='https://img.shields.io/badge/react%20router-red?style=for-the-badge&logo=reactrouter&logoColor=white&color=rgb(255%2C%2025%2C%2025)'/>
   <img src='https://img.shields.io/badge/Kubernetes-green?style=for-the-badge&logo=kubernetes&logoColor=white&color=blue'>
   <img src='https://img.shields.io/badge/Docker-blue?style=for-the-badge&logo=docker&logoColor=white&color=rgb(57%2C%20199%2C%20204)'/>
   <img src='https://img.shields.io/badge/Express-black?style=for-the-badge&logo=express&logoColor=white&color=black)
@@ -12,8 +14,10 @@
   <br>
   <img src='https://img.shields.io/badge/SASS-gold?style=for-the-badge&logo=sass'/>
   <img src='https://img.shields.io/badge/Prometheus-orange?style=for-the-badge&logo=prometheus&logoColor=white'/>
+  <img src="https://img.shields.io/badge/PromQL-black?style=for-the-badge&logo=prometheus&logoColor=white">
   <img src='https://img.shields.io/badge/Grafana-black?style=for-the-badge&logo=grafana&logoColor=orange'/>
   <img src='https://img.shields.io/badge/Helm-blue?style=for-the-badge&logo=helm&logoColor=white'/>
+  <img src="https://img.shields.io/badge/MongoDB-green?style=for-the-badge&logo=mongodb&logoColor=white">
 </div>
 
 # Introduction
