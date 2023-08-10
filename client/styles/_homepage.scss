@@ -1,0 +1,61 @@
+//Entire page
+#app {
+  height: 100%;
+}
+
+//Dashboard
+.dashboard-container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.dashboard-iframe {
+  width: 100%;
+  height: 1000px;
+  border: none;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+
+  .logout-button,
+  .signup-button {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+// #dashboard-typography {
+//   text-transform: uppercase;
+//   background-image: linear-gradient(
+//     -225deg,
+//     $red 0%,
+//     $yellow 29%,
+//     $green 67%,
+//   );
+//   background-size: auto auto;
+//   background-clip: border-box;
+//   background-size: 200% auto;
+//   color: black;
+//   background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   animation: textclip 2s linear infinite;
+//   display: inline-block;
+//   font-size: 75px;
+// }

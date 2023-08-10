@@ -1,119 +1,12 @@
+//Import Color Palette
 @import '_colorpalette';
-// All pages
-body {
-  background-color: rgb(17, 18, 23);
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-}
 
-// Metrics page
-#app {
-  height: 100%;
-}
+//Import Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-// Header
-#header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $darker;
-}
-
-#title {
-  color: $lighter;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-#names-metrics-text {
-  color: $light;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
-  display: flex;
-  width: 500px;
-}
-
-#dashboard-container {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-#dashboard-iframe {
-  width: 100%;
-  height: 1000px;
-  border: none;
-}
-
-#login-and-logout-container {
-  display: flex;
-  position: absolute;
-  right: 0px;
-  margin: auto;
-}
-
-#login-button,
-#logout-button {
-  border: none;
-  background-color: $light;
-  border-radius: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right: 5px;
-}
-
-#logout-button {
-  background-color: rgb(183, 183, 183);
-}
-
-#login-button:hover,
-#logout-button:hover {
-  opacity: 80%;
-}
-
-.login {
-  text-align: center;
-}
-
-.signUp {
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-  color: black;
-}
-
-#names-metrics-text {
-  color: $light;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-#dashboard-container {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-#dashboard-iframe {
-  width: 100%;
-  height: 1000px;
-  border: none;
-}
+//Import modularized scss files
+@import '_general';
+@import '_homepage';
+@import '_login_signup';
+@import '_logout';

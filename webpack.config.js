@@ -34,6 +34,14 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader?limit=8192',
+          },
+        ],
+      },
     ],
   },
   //at this point, npm install webpack-dev-server --save-dev

@@ -1,9 +1,11 @@
 import React from 'react';
 import './styles/styles.scss';
-import DashboardContainer from './containers/DashboardContainer.jsx';
+// import Dashboard from './containers/Dashboard.jsx';
+// import Homepage from './components/Homepage';
 import Login from './components/Login.jsx';
 import SignUp from './components/SignUp.jsx';
 import { Routes, Route, Link } from 'react-router-dom';
+import Homepage from './components/Homepage.jsx';
 
 const App = () => {
   return (
@@ -16,7 +18,7 @@ const App = () => {
       <Routes>
         <Route exact path='/' element={<Login />} />
         <Route exact path='/signup' element={<SignUp />} />
-        <Route exact path='/homepage' element={<DashboardContainer />} />
+        <Route exact path='/homepage' element={<Homepage />} />
       </Routes>
     </div>
   );

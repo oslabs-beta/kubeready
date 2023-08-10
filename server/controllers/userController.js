@@ -90,5 +90,47 @@ const UserController = {
       });
   },
 };
+module.exports = UserController;
+
+//VERIFY USER B4 COOKIE STUFF
+// verifyUser: (req, res, next) => {
+//   const { username, password } = req.body;
+//   // console.log(req.body, 'reqbody');
+//   // console.log(username, 'username');
+//   if (!username || !password) {
+//     return next(
+//       'Error - both username and password should be provided for login.'
+//     );
+//   }
+//   User.findOne({ username })
+//     .then((user) => {
+//       //if username is not found
+//       if (!user) {
+//         return next('Username or password is not found.');
+//         //ow, if the username is found
+//       } else {
+//         bcrypt.compare(password, user.password).then((result) => {
+//           //if the stored passwords do not match, return error
+//           if (!result) {
+//             return next('Username or password is not found.');
+//           } else {
+//             //if the stored passwords match, save user in res.locals
+//             res.locals.user = user;
+//             console.log('it worked');
+//             return next();
+//           }
+//         });
+//       }
+//     })
+//     .catch((err) => {
+//       return next({
+//         log: `userController.verifyUser ERROR: ${err}`,
+//         status: 500, // internal server error
+//         message: {
+//           error: 'Error in finding the username or password',
+//         },
+//       });
+//     });
+// },
 
 module.exports = UserController;
