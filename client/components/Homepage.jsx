@@ -7,7 +7,6 @@ const Homepage = () => {
     
     return (
         <div className='homepage'>
-            {/* Header */}
             <header className='dashboard-header'>
                 <h1>My Dashboard</h1>
                 <div className='header-buttons'>

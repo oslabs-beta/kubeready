@@ -100,7 +100,6 @@ const Login = () => {
                   />
                 </div>
                 <div class='create-account-redirect-link'>
-                  {/* <p class='question'>Don't have an account?</p> */}
                   <Link class='answer' to='/signup'>Create an account</Link>
                 </div>
                 <button type='submit' className='login-button' disabled={isLoading}>

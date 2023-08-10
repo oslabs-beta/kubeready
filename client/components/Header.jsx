@@ -1,4 +1,4 @@
-// NOT USING THIS
+// NOT USING THIS CURRENTLY
 
 import React from 'react';
 import kubereadylogo_transparent from '../assets/kubereadylogo_transparent.jpg'
