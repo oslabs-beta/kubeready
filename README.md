@@ -91,7 +91,7 @@ Implement typescript conversion for codebase | 🙏🏻
 Addition of a notification/alert system when metrics dip to critical | 🙏🏻
 
 # Publications
-Read our Medium Article [Here]()!
+Read our Medium Article [Here](https://medium.com/@kubeready/introducing-kubeready-ea51e8e705ee)!
 
 # Meet the Team
 <table>
