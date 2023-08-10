@@ -1,0 +1,12 @@
+//Import color palette
+@import '_colorpalette';
+
+//Import the fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+//Import modularized scss files
+@import '_general';
+@import '_homepage';
+@import '_login_signup';
+@import '_logout';
