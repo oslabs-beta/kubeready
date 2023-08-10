@@ -1,10 +1,10 @@
 ![kubeready](https://github.com/oslabs-beta/kubeready/assets/133065870/945e8dc5-6d2c-42e5-b93f-64271ff79548)
 
 # Technology Stack 
-
-![Static Badge](https://img.shields.io/badge/node-red?style=for-the-badge&logo=nodedotjs&logoColor=white&color=green)
-![Static Badge](https://img.shields.io/badge/react-js?style=for-the-badge&logo=react&logoColor=white&color=black)
-![Static Badge](https://img.shields.io/badge/Kubernetes-green?style=for-the-badge&logo=kubernetes&logoColor=white&color=blue)
+<div align="center">
+  <img src='https://img.shields.io/badge/node-red?style=for-the-badge&logo=nodedotjs&logoColor=white&color=green'/>
+<img src='https://img.shields.io/badge/react-js?style=for-the-badge&logo=react&logoColor=white&color=black'/>
+<img src='https://img.shields.io/badge/Kubernetes-green?style=for-the-badge&logo=kubernetes&logoColor=white&color=blue'>
 ![Static Badge](https://img.shields.io/badge/Docker-blue?style=for-the-badge&logo=docker&logoColor=white&color=rgb(57%2C%20199%2C%20204))
 ![Static Badge](https://img.shields.io/badge/Express-black?style=for-the-badge&logo=express&logoColor=white&color=black)
 ![Static Badge](https://img.shields.io/badge/React%20Router-red?style=for-the-badge&logo=reactrouter&logoColor=white&color=red)
@@ -13,6 +13,7 @@
 ![Static Badge](https://img.shields.io/badge/Prometheus-orange?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/Grafana-black?style=for-the-badge&logo=grafana&logoColor=orange)
 ![Static Badge](https://img.shields.io/badge/Helm-blue?style=for-the-badge&logo=helm&logoColor=white)
+</div>
 
 # Introduction
 For those experienced with the Kubernetes environment, the intricacies of monitoring cluster health are well understood. Navigating the complexities inherent in visualizing a cluster is a challenge that necessitates attention to a multitude of factors. The challenge lies in discerning which metrics hold critical significance and which ones might be relegated to a less prominent role. Get ready to be ready with kubeready! With our tool, visualizing kubernetes metrics from any local cluster becomes simple. Crafted with a developer-centric approach, kubeready boasts a user-friendly platform, delivering real-time metric visualization. By offering an instantaneous display of these metrics, kubeready empowers developers to promptly address performance issues as they emerge, significantly elevating their responsiveness and efficacy in tackling such challenges.
