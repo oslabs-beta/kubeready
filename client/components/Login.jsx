@@ -152,7 +152,7 @@ const Login = () => {
                 </div>
                 <div className='create-account-redirect-link'>
                   <Link className='answer' to='/signup'>
-                    Create an accountnp
+                    Create an account
                   </Link>
                 </div>
                 <button
@@ -167,7 +167,6 @@ const Login = () => {
           </div>
         </div>
       </div>
-      //{' '}
     </div>
   );
 };

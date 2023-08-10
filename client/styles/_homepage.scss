@@ -39,20 +39,14 @@
   cursor: pointer;
 }
 .logout-link {
-  background-color: gray;
-  color: white;
-  box-shadow: 0 0 7px rgba(40, 40, 40, 0.2);
-}
-.signup-link {
   background-color: $green;
   color: #282828;
-  box-shadow: 0 0 7px rgba(40, 42, 40, 0.2);
+  box-shadow: 0 0 7px rgba(40, 40, 40, 0.2);
 }
-.logout-link:hover,
-.signup-link:hover {
+
+.logout-link:hover {
   opacity: 0.8;
 }
-.logout-link:active,
-.signup-link:active {
+.logout-link:active {
   opacity: 0.6;
 }
