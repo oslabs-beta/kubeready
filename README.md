@@ -31,20 +31,42 @@ Kuberready is an advanced tool designed to streamline and enhance your experienc
 
 
 # Installation/Getting Started
+## To start a new Kubernetes cluster
+1. Install [Docker](https://www.docker.com/products/docker-desktop/) on your OS so a container can be spun up.
+2. Begin running a minikube to create a kubernetes cluster by running the command
+```
+minikube start
+```
+## To run kubeready
+1. Install [Helm](https://helm.sh/docs/intro/install/).
+2. Clone this respository onto your local machine.
+3. Run the following commands in your local repository directory.
 
-*Install [Docker](https://www.docker.com/products/docker-desktop/) on your OS so a container can be spun up.<br>*Begin running a minikube to visualize a local kubernetes cluster.<br>*To begin a minikube inside a docker container, run command ```minikube start```
+```
+npm install
+```
+```
+npm run build
+```
+```
+npm run start
+```
+4. Open localhost:3001
+```
+https://localhost:3001/
+```
+5. Create an account or sign in.
 ![LoginToDashboardGif](https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/kubeready%20login%20gif.gif?raw=true)
 ![SignUpGif](https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/kubeready%20signup.gif?raw=true)
 
 
 # Requirements
-//need to add relevant port numbers 
--The following ports need to be free:
+The following ports need to be free:
 Technology  | Port Number
 ------------- | -------------
 Grafana  | 3000
 Server | 3001
-Prometheus  | 8000/8080
+kubeready  | 8080
 
 
 
@@ -71,26 +93,26 @@ Addition of a notification/alert system when metrics dip to critical | 🙏🏻
 👨‍💻 = In progress<br>
 🙏🏻 = Looking for contributors<br>
 
-# Publications:
-Read our Article Here!
+# Publications
+Read our Medium Article [Here]()!
 
-# Meet the Team:
+# Meet the Team
 <table>
   <tr>
     <td>
-      <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alana_photo.jpg?raw=true" alt="Alana Herlands" width="200" height="200"><br>Alana Herlands<br><a href="https://github.com/alanaherlands">GitHub</a> | <a href="https://www.linkedin.com/in/alanaherlands/">LinkedIn</a><br>Software Engineer
+      <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alana_photo.jpg?raw=true" alt="Alana Herlands" width="200" height="160"><br>Alana Herlands<br><a href="https://github.com/alanaherlands">GitHub</a> | <a href="https://www.linkedin.com/in/alanaherlands/">LinkedIn</a><br>Software Engineer
     </td>
     <td>
-      <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/diane.jpeg?raw=true" alt="Diane Moon" width="200" height="200"><br>Diane Moon<br><a href="https://github.com/dianemoon">GitHub</a> | <a href="https://www.linkedin.com/in/dianejmoon/">LinkedIn</a><br>Software Engineer
+      <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/diane.jpeg?raw=true" alt="Diane Moon" width="200" height="160"><br>Diane Moon<br><a href="https://github.com/dianemoon">GitHub</a> | <a href="https://www.linkedin.com/in/dianejmoon/">LinkedIn</a><br>Software Engineer
     </td>
     <td>
-      <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/serena.jpeg?raw=true" alt="Serena Romano" width="200" height="200"><br>Serena Romano<br><a href="https://github.com/serenahromano">GitHub</a> | <a href="https://www.linkedin.com/in/srom1/">LinkedIn</a><br>Software Engineer
+      <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/serena.jpeg?raw=true" alt="Serena Romano" width="200" height="160"><br>Serena Romano<br><a href="https://github.com/serenahromano">GitHub</a> | <a href="https://www.linkedin.com/in/srom1/">LinkedIn</a><br>Software Engineer
     </td>
     <td>
-      <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alvin.jpg?raw=true" alt="Alvin Cheung" width="200" height="200"><br>Alvin Cheung<br><a href="https://github.com/alvin-cheung">GitHub</a> | <a href="https://www.linkedin.com/in/alvin-cy-cheung/">LinkedIn</a><br>Software Engineer
+      <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/alvin.jpg?raw=true" alt="Alvin Cheung" width="200" height="160"><br>Alvin Cheung<br><a href="https://github.com/alvin-cheung">GitHub</a> | <a href="https://www.linkedin.com/in/alvin-cy-cheung/">LinkedIn</a><br>Software Engineer
     </td>
     <td>
-      <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/noel%20palli.jpeg?raw=true" alt="Noel Pallivathucal" width="200" height="200"><br>Noel Pallivathucal<br><a href="https://github.com/njpallivathucal">GitHub</a> | <a href="https://www.linkedin.com/in/njpallivathucal/">LinkedIn</a><br>Software Engineer
+      <img src="https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/noel%20palli.jpeg?raw=true" alt="Noel Pallivathucal" width="200" height="160"><br>Noel Pallivathucal<br><a href="https://github.com/njpallivathucal">GitHub</a> | <a href="https://www.linkedin.com/in/njpallivathucal/">LinkedIn</a><br>Software Engineer
     </td>
   </tr>
 </table>
