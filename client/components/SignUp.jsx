@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import kubereadylogo_transparent from '../assets/kubereadylogo_transparent.jpg';
-//import { useHistory } from 'react-router-dom';
 
 const SignUp = () => {
   // state values and setters
