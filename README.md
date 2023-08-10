@@ -7,7 +7,7 @@
 ![Static Badge](https://img.shields.io/badge/react-js?style=for-the-badge&logo=react&logoColor=white&color=black)
 ![Static Badge](https://img.shields.io/badge/Kubernetes-green?style=for-the-badge&logo=kubernetes&logoColor=white&color=blue)
 ![Static Badge](https://img.shields.io/badge/Docker-blue?style=for-the-badge&logo=docker&logoColor=white&color=rgb(57%2C%20199%2C%20204))
-![Static Badge](https://img.shields.io/badge/Express-gray)
+![Static Badge](https://img.shields.io/badge/Express-black?style=for-the-badge&logo=express&logoColor=white&color=black)
 ![Static Badge](https://img.shields.io/badge/React%20Router-red?style=for-the-badge&logo=reactrouter&logoColor=white&color=red)
 ![Static Badge](https://img.shields.io/badge/Jest-purple?style=for-the-badge&logo=jest)
 ![Static Badge](https://img.shields.io/badge/SASS-gold?style=for-the-badge&logo=sass)
