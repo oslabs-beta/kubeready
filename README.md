@@ -18,11 +18,11 @@
 For those experienced with the Kubernetes environment, the intricacies of monitoring cluster health are well understood. Navigating the complexities inherent in visualizing a cluster is a challenge that necessitates attention to a multitude of factors. The challenge lies in discerning which metrics hold critical significance and which ones might be relegated to a less prominent role. Get ready to be ready with kubeready! With our tool, visualizing kubernetes metrics from any local cluster becomes simple. Crafted with a developer-centric approach, kubeready boasts a user-friendly platform, delivering real-time metric visualization. By offering an instantaneous display of these metrics, kubeready empowers developers to promptly address performance issues as they emerge, significantly elevating their responsiveness and efficacy in tackling such challenges.
 
 # Features
-Kuberready is an advanced tool designed to streamline and enhance your experience with Kubernetes cluster management, monitoring, and analysis. It offers seamless integrations with Grafana and Prometheus, robust password encryption, a comprehensive testing suite, and the ability to create and render custom dashboards. Let's delve into each of these features:
+kubeready is an advanced tool designed to streamline and enhance your experience with Kubernetes cluster management, monitoring, and analysis. It offers seamless integrations with Grafana and Prometheus, robust password encryption, a comprehensive testing suite, and the ability to create and render custom dashboards. Let's delve into each of these features:
 * Effortlessly connect your Kubernetes clusters to Grafana, allowing you to visualize and analyze various performance metrics, resource utilization.
-* By integrating Kuberready with Prometheus, you can easily collect, store, and query metrics from your Kubernetes clusters.
-* Security is a top priority in any Kubernetes environment. Kuberready prioritizes security by providing robust password encryption mechanisms.
-* Kuberready goes beyond monitoring by including a comprehensive testing suite. This suite enables you to simulate various scenarios and assess how interaction between different pages of the application are ocurring.
+* By integrating kubeready with Prometheus, you can easily collect, store, and query metrics from your Kubernetes clusters.
+* Security is a top priority in any Kubernetes environment. kubeready prioritizes security by providing robust password encryption mechanisms.
+* kubeready goes beyond monitoring by including a comprehensive testing suite. This suite enables you to simulate various scenarios and assess how interaction between different pages of the application are ocurring.
 
 # Requirements
 The following ports need to be free:
@@ -62,6 +62,9 @@ https://localhost:3001/
 ![SignUpGif](https://github.com/oslabs-beta/kubeready/blob/njpallivathucal-readMe/kubeready%20signup.gif?raw=true)
 
 # RoadMap Regarding Present/Future Considerations
+💯 = Ready to use<br>
+👨‍💻 = In progress<br>
+🙏🏻 = Looking for contributors<br>
 Feature  | Status
 ------------- | -------------
 Seamless grafana integration | 💯
@@ -75,14 +78,6 @@ Add functionality to monitor health of invididual pods | 🙏🏻
 Add an overall health score for each metric to allow for more immediate response by developer when metric dips to critical level | 🙏🏻
 Implement typescript conversion for codebase | 🙏🏻
 Addition of a notification/alert system when metrics dip to critical | 🙏🏻
-
-
-
-
-<br>
-💯 = Ready to use<br>
-👨‍💻 = In progress<br>
-🙏🏻 = Looking for contributors<br>
 
 # Publications
 Read our Medium Article [Here]()!
