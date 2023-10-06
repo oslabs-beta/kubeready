@@ -7,10 +7,9 @@ const SessionController = require('./controllers/sessionController.js');
 
 const PORT = 3001;
 
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-const mongoose = require('mongoose');
 
 mongoose.connect(
   'mongodb+srv://serenahromano2000:E17s30FqKCRZoW5t@cluster0.krvanjb.mongodb.net/',
@@ -22,9 +21,13 @@ mongoose.connection.once('open', () => {
 
 app.use(express.static(path.resolve(__dirname, '../build/')));
 
+
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });
+
+app.use('/login', loginRouter);
+app.use('/signup', signupRouter);
 
 app.get('/homepage', SessionController.checkCookie, (req, res) => {
   if (res.locals.hasCookie) {
