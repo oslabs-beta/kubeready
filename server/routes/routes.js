@@ -5,6 +5,7 @@ const CookieController = require('../controllers/cookieController.js');
 const SessionController = require('../controllers/sessionController.js');
 // const grafanaController = require('../controllers/grafanaController.js');
 // const installController = require('../controllers/installController.js');
+const LogoutController = require('../controllers/logoutController.js');
 
 //route handler for a post request to the /signup endpoint
 //CREATING A USER ROUTE HANDLER
@@ -32,6 +33,14 @@ router.post(
   CookieController.setCookie,
   (req, res) => {
     return res.status(201).json(res.locals.user);
+  }
+);
+
+router.get(
+  '/logout',
+  // LogoutController.deleteCookie,
+  (req, res) => {
+    return res.send('User has been logged out.').redirect('/');
   }
 );
 
