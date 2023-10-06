@@ -1,6 +1,7 @@
 const { spawnSync } = require('child_process');
 const apitoken = require('../grafana/apitoken.json');
 const panels = require('../grafana/panels.json');
+const path = require('path');
 
 //initialize an empty object that will house dashboard URL
 const urlStorage = {};
@@ -9,21 +10,47 @@ const grafanaController = {
   getApiToken: (req, res, next) => {
     console.log('entered getApiToken in Grafana Controller');
 
-    const getToken = spawnSync(
-      'curl -s -X POST -H "Content-Type: application/json" -H "Cookie: grafana_session=$session" -d \'{"name":"apikeycurl0", "role": "Admin"}\' http://localhost:3000/api/auth/keys > grafana/apitoken.json',
-      { stdio: 'inherit', shell: true }
-    );
 
-    if (getToken.stderr) {
-      console.log(`getting grafana API token error: ${getToken.stderr}`);
-      return next({
+    //try catch block
+    //throw error if apitoken.json file is empty
+
+    // Updated on Friday, October 6
+    try {
+      const getToken = spawnSync(
+        'curl -s -X POST -H "Content-Type: application/json" -H "Cookie: grafana_session=$session" -d \'{"name":"apikeycurl0", "role": "Admin"}\' http://localhost:3000/api/auth/keys > grafana/apitoken.json',
+        { stdio: 'inherit', shell: true }
+      )
+
+      const apiTokenData = fs.readFileSync('../grafana/apitoken.json', 'utf8');
+
+      // if the file is empty or does NOT contain JSON...
+      if (!apiTokenData.trim()) {
+        throw new Error('api token is empty or does not contain valid JSON');
+      };
+
+      // parse the JSON data
+      const apiToken = JSON.parse(apiTokenData);
+      // persist through res.locals
+    } catch (error) {
+      return next ({
         log: 'Error on grafanaController.getApiToken middleware.',
         status: 500,
         message: {
           err: 'An error occurred when trying to get the grafana API token.',
-        },
+        }
       });
     }
+
+    // if (getToken.stderr) {
+    //   console.log(`getting grafana API token error: ${getToken.stderr}`);
+    //   return next({
+    //     log: 'Error on grafanaController.getApiToken middleware.',
+    //     status: 500,
+    //     message: {
+    //       err: 'An error occurred when trying to get the grafana API token.',
+    //     },
+    //   });
+    // }
 
     return next();
   },
@@ -44,6 +71,7 @@ const grafanaController = {
         Accept: 'application/json',
         'Content-Type': 'application/json',
         Authorization: `Bearer ${apitoken.key}`,
+        //  Authorization: 'Basic ' + btoa('admin:prom-operator'), // Encode credentials
       },
       body: JSON.stringify({
         dashboard: {

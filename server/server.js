@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-
+const mongoose = require('mongoose');
 const router = require('./routes/routes.js');
 const SessionController = require('./controllers/sessionController.js');
 
@@ -26,8 +26,8 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });
 
-app.use('/login', loginRouter);
-app.use('/signup', signupRouter);
+// app.use('/login', loginRouter);
+// app.use('/signup', signupRouter);
 
 app.get('/homepage', SessionController.checkCookie, (req, res) => {
   if (res.locals.hasCookie) {
