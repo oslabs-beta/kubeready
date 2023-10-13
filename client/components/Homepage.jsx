@@ -8,7 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 // logout progres 10/13:
 // identified error is coming from improper json syntax from response
 
-// to do: 
+// to do:
 // troubleshoot json syntax/fetch content type
 // investigate using res.locals for logout
 // identify where redirect/navigate should be performed
@@ -23,9 +23,9 @@ const Homepage = () => {
     console.log('entering handleLogout function- logging');
 
     fetch('api/logout', {
-      method: "GET",
+      method: 'GET',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     })
       .then((response) => {
@@ -34,16 +34,16 @@ const Homepage = () => {
         if (!response.ok) {
           console.log('not working line 22');
           throw new Error('Could not logout');
-        } 
-        console.log('response status is OK-logging')
+        }
+        console.log('response status is OK-logging');
         return response.json();
       })
       // if logout successful, redirect to /
-      
+
       .then((loggingOutUser) => {
         console.log('User has logged out');
         setIsLoading(false);
-        // navigate('/');
+        navigate('/');
       })
       .catch((error) => {
         setIsLoading(false);
@@ -57,7 +57,11 @@ const Homepage = () => {
       <header className='dashboard-header'>
         <h1>My Dashboard</h1>
         <div className='header-buttons'>
-          <button className='logout-link' disabled={isLoading} onClick={handleLogout}>
+          <button
+            className='logout-link'
+            disabled={isLoading}
+            onClick={handleLogout}
+          >
             Logout
           </button>
           {/* <Link className='logout-link' to='/'>

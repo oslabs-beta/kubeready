@@ -28,7 +28,9 @@ app.get('/', (req, res) => {
 
 app.get('/homepage', SessionController.checkCookie, (req, res) => {
   if (res.locals.hasCookie) {
-    res.status(200).redirect('/homepage');
+    //going to try and change this
+    //original: res.status(200).redirect('/homepage');
+    res.status(200).send('Welcome to the homepage!');
   } else {
     console.log('No cookie found - you should not be accessing /homepage');
     res.status(401).send('No cookie found');

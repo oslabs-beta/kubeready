@@ -36,12 +36,8 @@ router.post(
   }
 );
 
-router.get(
-  '/logout',
-  // LogoutController.deleteCookie,
-  (req, res) => {
-    return res.status(200).redirect('/').json();
-  }
-);
+router.get('/logout', LogoutController.deleteCookie, (req, res) => {
+  return res.status(200).json({ message: 'Logout successful' });
+});
 
 module.exports = router;
