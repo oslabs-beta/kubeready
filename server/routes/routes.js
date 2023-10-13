@@ -40,7 +40,7 @@ router.get(
   '/logout',
   // LogoutController.deleteCookie,
   (req, res) => {
-    return res.send('User has been logged out.').redirect('/');
+    return res.status(200).redirect('/').json();
   }
 );
 
