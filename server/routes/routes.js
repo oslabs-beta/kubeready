@@ -25,7 +25,7 @@ router.post(
   installController.installPrometheus,
   installController.recreatePromGraf,
   installController.portForward,
-  grafanaController.getApiToken,
+  // grafanaController.getApiToken,
   // grafanaController.generateDashboard,
   UserController.addUrls,
   SessionController.startSession,

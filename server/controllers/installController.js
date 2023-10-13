@@ -152,10 +152,12 @@ const installController = {
     const PORT = 3000;
 
     //Asyncronously forward prometheus-grafana to the PORT.
-    const portFw = spawn(
-      `kubectl port-forward deployment/prometheus-grafana ${PORT}`,
+    // const portFw = 
+    spawn(
+      `kubectl port-forward deployment/prometheus-grafana ${PORT}:80`,
       { shell: true }
     );
+    
 
     //When the process has started, move on to the next middleware.
     portFw.on('spawn', () => {
@@ -179,7 +181,11 @@ const installController = {
       });
     });
 
-    return next();
+    setTimeout(() => {
+      return next();
+    }, 2000);
+
+    // return next();
   },
 };
 

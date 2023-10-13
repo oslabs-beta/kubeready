@@ -16,8 +16,10 @@ const grafanaController = {
 
     // Updated on Friday, October 6
     try {
+      console.log('entered try block')
       const getToken = spawnSync(
-        'curl -s -X POST -H "Content-Type: application/json" -H "Cookie: grafana_session=$session" -d \'{"name":"apikeycurl0", "role": "Admin"}\' http://localhost:3000/api/auth/keys > grafana/apitoken.json',
+        // 'curl -s -X POST -H "Content-Type: application/json" -H "Cookie: grafana_session=$session" -d \'{"name":"apikeycurl0", "role": "Admin"}\' http://localhost:3000/api/auth/keys > grafana/apitoken.json',
+        // 'curl -s -X POST -H "Content-Type: application/json" -H "Cookie: grafana_session=$session" -d '{"name":"apikeycurl0", "role": "Admin"}\' http://localhost:3000/api/auth/keys > "$(pwd)/grafana/apitoken.json"',
         { stdio: 'inherit', shell: true }
       )
 
@@ -30,7 +32,9 @@ const grafanaController = {
 
       // parse the JSON data
       const apiToken = JSON.parse(apiTokenData);
+
       // persist through res.locals
+      res.locals.apiToken = apiToken;
     } catch (error) {
       return next ({
         log: 'Error on grafanaController.getApiToken middleware.',
