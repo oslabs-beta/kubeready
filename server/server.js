@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 
 app.get('/homepage', SessionController.checkCookie, (req, res) => {
   if (res.locals.hasCookie) {
-    //going to try and change this
+    //Trying something out- realizing here that this is a route handler for the '/homepage' route and inside of the route handler we are redirecting to the homepage.
     //original: res.status(200).redirect('/homepage');
     res.status(200).send('Welcome to the homepage!');
   } else {

@@ -16,6 +16,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(false);
+  //Going with the navigate option instead of the redirect option in the backend
   const navigate = useNavigate();
   // define logout function here
   const handleLogout = (e) => {
@@ -38,8 +39,7 @@ const Homepage = () => {
         console.log('response status is OK-logging');
         return response.json();
       })
-      // if logout successful, redirect to /
-
+      // if logout successful, navigate to /
       .then((loggingOutUser) => {
         console.log('User has logged out');
         setIsLoading(false);
